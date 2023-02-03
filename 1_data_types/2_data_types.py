@@ -1,5 +1,4 @@
-# 1 season - Data Types  
-# Date: 09/09/2022  
+# 1 season - Data Types    
 
 # varName: int        -> indicates reference to the data type we using (but no define it)
 # the type() function -> allows us to know the data type of the variable
