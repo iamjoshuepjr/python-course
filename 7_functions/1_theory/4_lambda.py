@@ -1,5 +1,5 @@
 # ========================================================================
-#  Lambda function us a special type of function witout the function name
+#  Lambda function is a special type of function witout the function name
 
 # Lambda Function Declaration
 # We use the lambda keyword instead of def to create a lambda function
