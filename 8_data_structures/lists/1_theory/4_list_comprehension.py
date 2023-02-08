@@ -76,7 +76,7 @@ for i in range(len(matrix[0])):
 print(f'Transpose: {transposed}')
 
 print('\nNested Loops in List Comprehension')
-matrix = [[1, 2], [3,4], [5,6], [7,8]]
+matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
 trasnpose = [[row[i] for row in matrix] for i in range(2)]
 print(trasnpose)
 print()
