@@ -1,6 +1,6 @@
 # =================================================================================
 #                              DETERMINE THE LENGTH OF A LIST
-#  The get the length of a list, use the built-in function/method len(). 
+#  To get the length of a list, use the built-in function/method len(). 
 #  The len() function/method find the number of elements present in a list.
 #  The following code creates a new variable, numberOfPlanet. 
 #  The code assigns that variable with the number of items in the list planets (8)

@@ -1,6 +1,6 @@
 # =================================================================================
 #                            DETERMINE THE LENGTH OF A TUPLE
-#  The get the length of a tuple, use the built-in function/method len(). 
+#  To get the length of a tuple, use the built-in function/method len(). 
 #  The len() function/method find the number of elements present in a tuple.
 #  The following code creates a new variable, months and week. 
 
