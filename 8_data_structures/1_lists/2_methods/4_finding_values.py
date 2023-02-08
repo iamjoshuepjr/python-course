@@ -48,7 +48,6 @@ print(f'  The index of the [{element}] is [{index}]')
 print('--------------------------------------')
 print()
 
-
 element = 'Meta'
 index = tech_companies.index(element, 4, 11)
 print('--------------------------------------')
