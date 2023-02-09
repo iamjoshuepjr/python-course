@@ -32,6 +32,7 @@ fruits.add(to_add)
 print('----------------------------------------------------------------------------')
 print(f'* New Fruits Set:   ')
 print(fruits)
+print(f'* The elemetn {to_add} was added')
 print('------------------------------------------------------------------------------')
 elements = len(fruits)
 print(f'                 Currently the Fruits Set has: {elements} element(s)')
@@ -39,12 +40,19 @@ print('            ----------------------------------------------------\n\n')
 
 print('--------------------')
 print('2 .update() method ')
+# The update add items from set A to set B (or more sets) 
+# and update the set A with the resulting set
+# The update method can take any number of arguments
+
 tropical_fruits = {'Dragon Fruit', 'Passion Fruit', 'Acai'}
-fruits.update(tropical_fruits)
+exotics_fruits = {'Tomate de Árbol', 'Lulo', 'Guayaba'}
+fruits.update(tropical_fruits, exotics_fruits)
 
 print('---------------------------------------------------------------------------------------------------------------------')
 print(f'* New Fruits Set:   ')
 print(fruits)
+print(f'Set tropical fruits {tropical_fruits} was added')
+print(f'Set exotics fruits {exotics_fruits} was added')
 print('---------------------------------------------------------------------------------------------------------------------')
 elements = len(fruits)
 print(f'                 Currently the Fruits Set has: {elements} element(s)')

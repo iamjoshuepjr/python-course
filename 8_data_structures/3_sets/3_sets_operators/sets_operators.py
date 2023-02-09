@@ -33,7 +33,7 @@ print(f'   Currently the Front-End Set has: {elements} elements')
 print('-----------------------------------------------------\n')
 
 print('---------------------------------------')
-print(f'1.1 Performin union operation using |')
+print(f'1.1 performing union operation using |')
 full_stack = back_end | front_end
 print('-------------------------------------------------------------------------------------------------------------------------------')
 print(f'* New Full-Stack set: {full_stack}')
@@ -58,7 +58,7 @@ print(f'   Currently the Front-End Set has: {elements} elements')
 print('-----------------------------------------------------\n')
 
 print('-----------------------------------------------------')
-print(f'1.2 Performin union operation using .union() method ')
+print(f'1.2 performing union operation using .union() method ')
 frameworks_full_stack = frameworks_back_end.union(frameworks_front_end)
 print('----------------------------------------------------------------------------------------------------------------')
 print(f'* New Frameworks Full-Stack set:')
@@ -87,8 +87,8 @@ print(f' Currently the Set B has: {elements} elements')
 print('-------------------------------------\n')
 
 
-print('----------------------------------------------')
-print(f'2.1 Performin intersection operation using &')
+print('-----------------------------------------------')
+print(f'2.1 performing intersection operation using &')
 intersection = setA & setB
 print('-------------------------------------')
 print(f'* Intersection set: {intersection}')
@@ -112,7 +112,7 @@ print(f' Currently the Set D has: {elements} elements')
 print('-------------------------------------\n')
 
 print('-----------------------------------------------------------')
-print(f'2.2 Performin intersection operation using .intersection()')
+print(f'2.2 performing intersection operation using .intersection()')
 intersection = setC.intersection(setD)
 print('-----------------------------------------------------------------------------------------')
 print(f'* Intersection set: {intersection}')
@@ -140,7 +140,7 @@ print(f' Currently the Set F has: {elements} elements')
 print('-------------------------------------\n')
 
 print('-----------------------------------------------------')
-print(f'3.1 Performin difference operation using - operator')
+print(f'3.1 performing difference operation using - operator')
 difference = setE - setF
 print('-----------------------------------------------------')
 print(f'* Difference set E - F: {difference}')
@@ -148,16 +148,25 @@ elements = len(difference)
 print('-----------------------------------------------------------------------------------------')
 print(f'                   Currently the Difference E - F Set has: {elements} elements')
 print('                  ---------------------------------------------------\n')
-difference = setF - setE
-print(f'* Difference set F - E: {difference}')
+
+print('----------------------------------------------------------------')
+print(f'3.2 performing difference operation using .difference() method')
+difference = setF.difference(setE)
+print('-----------------------------------------------------')
+print(f'* Difference set E - F: {difference}')
 elements = len(difference)
 print('-----------------------------------------------------------------------------------------')
-print(f'                   Currently the Difference F - E Set has: {elements} elements')
+print(f'                   Currently the Difference Set E - F has: {elements} elements')
 print('                  ---------------------------------------------------\n')
 
+print('--------------------------')
+print('4. Set Symetric Diference ')
+print('--------------------------\n')
+# The symmetric difference between two sets A and B include all elements of A and B without the common elements
+# We use the ^ operator, and/or symetric_difference() method to perform symmetric difference between two sets
 
-setG = {4, 8, 14, 21, 28}
-setH = {4, 63, 16, 14, 5}
+setG = {24, 56, 67, 89}
+setH = {56, 89, 79, 59}
 
 print('-------------------------------------')
 print(f'* Original Set G:  {setG} ')
@@ -170,17 +179,96 @@ print(f' Currently the Set H has: {elements} elements')
 print('-------------------------------------\n')
 
 print('-------------------------------------------------------')
-print(f'3.2 Performin difference operation using .difference')
-difference = setG.difference(setH)
+print(f'4.1 performing difference operation using ^ operator ')
+difference = setG ^ setH
 print('-----------------------------------------------------')
 print(f'* Difference set G - H: {difference}')
 elements = len(difference)
 print('-----------------------------------------------------------------------------------------')
-print(f'                   Currently the Difference Set G - H has: {elements} elements')
-print('                  ---------------------------------------------------\n')
+print(f'                   Currently the Symetric Difference Set G - H has: {elements} elements')
+print('                  ---------------------------------------------------------------\n')
 
-difference = setH.difference(setG)
-print(f'* Difference set H - G: {difference}')
+setI = {28, 24, 90, 18}
+setJ = {24, 18, 79, 59}
+
+print('-------------------------------------')
+print(f'* Original Set I:  {setI} ')
+print(f'* Original Set J:  {setJ} ')
+print('-------------------------------------')
+elements = len(setI)
+print(f' Currently the Set I has: {elements} elements')
+elements = len(setJ)
+print(f' Currently the Set J has: {elements} elements')
+print('-------------------------------------\n')
+
+print('--------------------------------------------------------------------')
+print(f'4.2 performing difference operation symmetric_difference() method ')
+difference = setI.symmetric_difference(setJ)
+print('-----------------------------------------------------')
+print(f'* Difference set I - J: {difference}')
 elements = len(difference)
-print(f'                   Currently the Difference Set H - G has: {elements} elements')
-print('                  ---------------------------------------------------\n')
+print('-----------------------------------------------------------------------------------------')
+print(f'                   Currently the Symetric Difference Set I - J has: {elements} elements')
+print('                  ---------------------------------------------------------------\n')
+
+print('-------------------------------------')
+print('5. Set Symetric Diference and Update ')
+print('-------------------------------------\n')
+# method finds the symmetric difference of two sets (non-similar items of both sets) 
+# and updates it to the set that calls the method
+
+setK = {28, 24, 90, 18}
+setL = {24, 18, 79, 59}
+
+print('-------------------------------------')
+print(f'* Original Set K:  {setK} ')
+print(f'* Original Set L:  {setL} ')
+print('-------------------------------------')
+elements = len(setK)
+print(f' Currently the Set K has: {elements} elements')
+elements = len(setL)
+print(f' Currently the Set L has: {elements} elements')
+print('-------------------------------------\n')
+
+print('---------------------------------------------------------------------------')
+print(f'5.1 performing difference operation symmetric_difference_update() method ')
+symmetric_d = setK.symmetric_difference(setL)
+setK.symmetric_difference_update(setL) # I cannot assign the updated set to a new variable
+print('-----------------------------------------------------')
+print(f'* Difference set K - L: {symmetric_d}')
+print(f'* New Set: {setK}')
+print('-----------------------------------------------------\n')
+
+print('---------------------------------')
+print('6. Check for equality of 2 sets ')
+print('---------------------------------\n')
+# We can use the == operator to check whether two sets are equal or not
+
+setM = {24, 18, 16}
+setN = {24, 18, 16}
+
+print('-------------------------------------')
+print(f'* Original Set M:  {setM} ')
+print(f'* Original Set N:  {setN} ')
+print('-------------------------------------')
+elements = len(setM)
+print(f' Currently the Set M has: {elements} elements')
+elements = len(setN)
+print(f' Currently the Set N has: {elements} elements')
+print('-------------------------------------\n')
+
+print('-----------------------------------------------------')
+print(f'5.1 Check for Set Equiality')
+print('-----------------------------------------------------')
+if (setM == setN):
+    print('------------------------------')
+    print(f' Set M and Set N are Equals!')
+    print(f' Set M {setM}')
+    print(f' Set N {setN}')
+    print('-----------------------------\n')
+else:
+    print('---------------------------------')
+    print(f' Set M and Set N are Differents!')
+    print(f' Set M {setM}')
+    print(f' Set N {setN}')
+    print('--------------------------------\n')
