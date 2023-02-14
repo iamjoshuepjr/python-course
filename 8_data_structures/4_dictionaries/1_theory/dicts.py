@@ -125,7 +125,7 @@ del car_id
 print('----------------------')
 print(' New Car Dictionary: ')
 print('------------------------------------------------------------------')
-print(car_id)
+print(car_id) # NameError: name 'car_id' is not defined
 print('------------------------------------------------------------------\n')
 
 
