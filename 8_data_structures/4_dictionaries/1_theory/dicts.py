@@ -37,7 +37,11 @@ print('-------------------------------------------------------------------------
 #                  ACCESS DICTIONATY ELEMETNS 
 # In python we use  the keys to acces their corresponding values
 
-car_id = {1145: 'Mustang', 4511: 'Camaro', 4151: 'Jeep'}
+car_id = {
+    1145: 'Mustang', 
+    4511: 'Camaro', 
+    4151: 'Jeep'
+}
 
 print('3. Accessig Dictionary Elements: ')
 print('------------------')
