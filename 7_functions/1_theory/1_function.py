@@ -50,8 +50,6 @@ def add_numbers (x, y):
 # invoking the function by passing the arguments
 add_numbers(66, 6)
 
-
-
 print('\n\t\t\t+-----------------------+')
 print('\t\t\t-  Function retun Type  -')
 print('\t\t\t+-----------------------+\n\n')
