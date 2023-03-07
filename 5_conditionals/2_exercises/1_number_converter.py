@@ -1,8 +1,7 @@
 # ==================================================
 #   Exercise converter a given number into text
 
-print()
-number = int(input('Enter a number between 1-3 you want to convert: '))
+number = int(input('\nEnter a number between 1-3 you want to convert: '))
 textNumber = ''
 
 if (number == 1):
