@@ -127,4 +127,3 @@ find_sum(34, 56, 99, 7)
 # invoking function by passing 3 arguments
 find_sum(24, 18, 16)
 print()
-
