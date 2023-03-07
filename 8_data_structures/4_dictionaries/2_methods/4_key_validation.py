@@ -23,7 +23,6 @@ print('Result all() function: ')
 print(result)
 print('-----------------------')
 
-
 # One True Value
 one_true = {0: 'False', 1: 'True'}
 result = all(one_true)

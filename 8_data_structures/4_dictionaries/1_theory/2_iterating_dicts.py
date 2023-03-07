@@ -11,4 +11,8 @@ print('* Days of the week:   ')
 for i in week:
     print(week[i])
 print('------------------------------')
+print('* Term and value:   ')
+for term, value in week.items():
+    print(f'Key: {term}, Value: {value}')
+print('------------------------------')
 
