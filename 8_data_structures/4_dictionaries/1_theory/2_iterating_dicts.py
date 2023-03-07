@@ -13,6 +13,6 @@ for i in week:
 print('------------------------------')
 print('* Term and value:   ')
 for term, value in week.items():
-    print(f'Key: {term}, Value: {value}')
+    print(f'Key: {term} - Value: {value}')
 print('------------------------------')
 
