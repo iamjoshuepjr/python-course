@@ -15,11 +15,11 @@
 # In Python, we use the open() method to open files
  
 # Opening file in current directory
-relative_path = '9_file_handling\\message.txt'
+relative_path = '9_file_handling\\1_theory\\message.txt'
 file = open(relative_path, 'r')
 
 # reading the file content
-content = file.readline()
+content = file.read()
 
 # displaying the file content
 print(content)
@@ -34,7 +34,18 @@ file.close()
 # inside open() function as a second argument
 
 # Create a new file with open() function on write mode
-second_path = '9_file_handling\\.txt'
-file = open()
+second_path = '9_file_handling\\1_theory\\message_2.txt'
+file2 = open(second_path, 'w')
+phrase = 'Python is insane :v'
+file2.write(phrase)
 
+# ===============================================
+#                  Writing - Reading
+
+third_path = '9_file_handling\\1_theory\\message_3.txt'
+file3 = open(third_path, 'r+')
+phrase = 'Welcome\nHow are you?'
+file3.write(phrase)
+file3.seek(0)
+print(file3.read())
 
