@@ -257,9 +257,9 @@ elements = len(setN)
 print(f' Currently the Set N has: {elements} elements')
 print('-------------------------------------\n')
 
-print('-----------------------------------------------------')
-print(f'5.1 Check for Set Equiality')
-print('-----------------------------------------------------')
+print('-----------------------------')
+print(f'6.1 Check for Set Equiality')
+print('----------------------------')
 if (setM == setN):
     print('------------------------------')
     print(f' Set M and Set N are Equals!')
@@ -272,3 +272,58 @@ else:
     print(f' Set M {setM}')
     print(f' Set N {setN}')
     print('--------------------------------\n')
+
+print('-----------------------')
+print('7. Supper and Subsets ')
+print('-----------------------\n')
+
+setO = {44, 33, 22, 66, 100}
+setP = {44, 33, 22, 66, 100, 200, 300, 400}
+
+print('-----------------------------------------------------------')
+print(f'* Original Set O:  {setO} ')
+print(f'* Original Set P:  {setP} ')
+print('-----------------------------------------------------------')
+
+print('\n--------------------------------------------------------')
+print(f'7.1 performing subset operation .issubset() method ')
+subset = setO.issubset(setP)
+# The .issubset() method returns True if setA is the subset of B 
+# i.e. if all the elements of setA are present in setB. Else, it returns False
+print('-----------------------------------------------------')
+print(f'* Set O is Subset of Set P: {subset}')
+print('-----------------------------------------------------\n')
+subset = setP.issubset(setO)
+print(f'* Set P is Subset of Set O: {subset}')
+print('-----------------------------------------------------\n')
+
+print('--------------------------------------------------------')
+print(f'7.2 performing superset operation .issuperset() method ')
+superset = setO.issuperset(setP)
+# The .issuperset() method returns True if a set has every elements of another set
+# i.e. if all the elements of setB are present in setA. Else, it returns False
+print('-----------------------------------------------------')
+print(f'* Set O is Superset of Set P: {superset}')
+print('-----------------------------------------------------\n')
+superset = setP.issuperset(setO)
+print(f'* Set P is Superset of Set O: {superset}')
+print('-----------------------------------------------------\n')
+
+print('-------------')
+print('8. Disjoint  ')
+print('-------------\n')
+
+setQ = {4, 333, -2, 7100}
+setR = {44, 33, 22, 66,}
+
+print('--------------------------------------------------------')
+print(f'8.1 performing superset operation .isdisjoint() method ')
+disjoint = setQ.isdisjoint(setR)
+# The .isdisjoint() method returns True if two sets do not have any common items between them
+print('-----------------------------------------------------')
+print(f'* Set Q is disjoint of Set R: {disjoint}')
+print('-----------------------------------------------------\n')
+disjoint = setR.isdisjoint(setQ)
+print(f'* Set R is disjoint of Set Q: {disjoint}')
+print('-----------------------------------------------------\n')
+
