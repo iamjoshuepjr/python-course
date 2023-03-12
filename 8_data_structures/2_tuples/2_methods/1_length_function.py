@@ -12,7 +12,7 @@ print('\t\t\t\t    +----------------+\n')
 months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
 week = ('Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday', 'Saturday')
 
-print('1. len() method')
+print('1. len() function')
 print('---------------------------------------------------------------------------------------------------------------------------')
 print('* Tuple having strings:   ')
 print(months)
