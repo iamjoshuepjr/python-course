@@ -77,7 +77,7 @@ print(f'* Front End List: {front_end}         *')
 print('-----------------------------------------------------------------')
 print()
 
-front_end.extend(back_end)
+full = front_end.extend(back_end)
 elements = len(front_end)
 print()
 print('--------------------------------------------------------------------------------------------------------')
