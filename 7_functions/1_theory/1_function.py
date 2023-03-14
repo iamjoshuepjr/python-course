@@ -100,8 +100,9 @@ division(x = 69)
 # function call with no arguments
 division()
 
-print('')
-print('Python Keyword Argument\n')
+print('\t\t+---------------------------+')
+print('\t\t-  Python Keyword Argument  -')
+print('\t\t----------------------------+\n\n')
 # Keyword arguments are assigned based on the name of arguments
 
 def user(username, password):
@@ -114,10 +115,10 @@ print('\t\t+--------------------------------------+')
 print('\t\t-  Function with Arbitrary Arguments   -')
 print('\t\t---------------------------------------+\n\n')
 
-def find_sum (*numbers):
+def find_sum (*args):
     result = 0
 
-    for num in numbers:
+    for num in args:
         result += num
     print(f'Total: {result}')
 
@@ -126,6 +127,23 @@ find_sum(34, 56, 99, 7)
 
 # invoking function by passing 3 arguments
 find_sum(24, 18, 16)
+
+print('\n\t\t+------------------+')
+print('\t\t- Multiple Return  -')
+print('\t\t-------------------+\n\n')
+# As you know a function can return a single variable, but it can also return multiple variables
+
+def getPerson(name, age, country):
+    return name, age, country
+
+name, age, country = getPerson('Dayanna', 24, 'USA')
+print(name)
+print(age)
+print(country)
+
+# Note if you use a single variable to return values, the result will be a tuple
+name = getPerson('Dayanna', 24, 'USA')
+print(name)
 
 print('\n\t\t+------------------------------------+')
 print('\t\t- Function Arguments by passing List -')
