@@ -38,7 +38,7 @@ print('\n\t\t\t+----------------------+')
 print('\t\t\t-  Function Arguments  -')
 print('\t\t\t+----------------------+\n')
 
-# A funntion can also have arguments. 
+# A function can also have arguments. 
 # An argument is a value that is accepted by a function
 
 print('1. Function with argumens: ')
@@ -126,4 +126,36 @@ find_sum(34, 56, 99, 7)
 
 # invoking function by passing 3 arguments
 find_sum(24, 18, 16)
-print()
+
+print('\n\t\t+------------------------------------+')
+print('\t\t- Function Arguments by passing List -')
+print('\t\t-------------------------------------+\n\n')
+
+def ages(ages):
+    count = 1
+    for age in ages:
+        print(f'Age: {count} = {age}')
+        count += 1
+ages([1, 1.7, 'Hello!'])
+
+print('\n\t\t+-------------------------------------+')
+print('\t\t- Function Arguments by passing Dicts -')
+print('\t\t--------------------------------------+\n\n')
+
+print('Way 1:\n')
+
+def dictParameter(numbers):
+    i = 1
+    for number in numbers:
+        print(f'Number {i}: {numbers[number]}')
+        i+= 1
+dictParameter({1:'One', 2: 'Two', 3: 'Three', 4: 'Four'})
+
+print('\nWay 2:\n')
+
+def dictParameter2(**numbers):
+    i = 1
+    for number in numbers:
+        print(f'Number {i}: {numbers[number]}')
+        i+= 1
+dictParameter2(i = 1, i2 = 2, i3 = 3, i4 = 5)
