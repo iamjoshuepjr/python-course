@@ -1,7 +1,10 @@
+import os
 print('\n------------------------------')
 number1 = int(input(' Enter a number here: '))
 number2 = int(input(' Enter another number here: '))
 print('------------------------------\n')
+os.system('cls')
+
 result = 0
 option  = 0
 
@@ -23,6 +26,7 @@ while (option != 5):
     print('\n---------------------------')
     option = int(input('Enter your option here: '))
     print('---------------------------')
+    os.system('cls')
 
     def addition(x, y):
       return int (x + y)
@@ -31,9 +35,13 @@ while (option != 5):
       return int (x - y)
     
     def multiplication(x, y):
+      if(y == 0):
+        return 'Error!'
       return int (x * y)
     
     def division(x, y):
+      if(y == 0):
+        return 'Error!'
       return x / y
     def exit():
       return 'See you later!\nGood Hacking!'
