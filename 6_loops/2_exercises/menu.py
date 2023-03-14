@@ -19,21 +19,24 @@ while (option != 5):
     option = int(input('\nEnter your option here: '))
     print('---------------------------')
     
-    if((option == 1)):
-        result = number1 + number2
-    elif (option == 2):
-        result = number1 - number2
-    elif (option == 3):
-        result = number1 * number2
-    elif (option == 4):
-        result = number1 / number2
-    elif (option == 5):
-        print('+----------------+')
-        print('- See you later! -')
-        print('+----------------+')
-        break
-    else:
-        result = 'Invalid Choosen!'
+    
+    match option:
+        case 1:
+            result = number1 + number2    
+        case 2:
+            result = number1 - number2
+        case 3:
+            result = number1 * number2
+        case 4:
+            result = number1 / number2
+        case 5:
+            print('+----------------+')
+            print('- See you later! -')
+            print('+----------------+')
+            break
+        case _:
+            result = 'Invalid Choosen!'
+
     print(f'\nYou had choosen {option}')
     print('---------------------------')
     print(f'\nResult: {result}')
