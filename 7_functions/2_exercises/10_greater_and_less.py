@@ -22,6 +22,5 @@ def searchFor(numbers):
             num_min = num
     return num_max, num_min
 
-nums = askForNum()
-greater, less = searchFor(nums)
+greater, less = searchFor(askForNum())
 print(f'Greater: ({greater}), Less: ({less})')
