@@ -24,6 +24,7 @@ def bubble(numbers):
                 aux = numbers[j]
                 numbers[j] = numbers[j+1]
                 numbers[j+1] = aux 
+            lenght -= 1
     return numbers, count           
 
 def diplayList(numbers, count):
