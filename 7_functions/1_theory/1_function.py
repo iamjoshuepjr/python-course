@@ -65,7 +65,6 @@ def find_square(num):
 
 # invoking function
 square = find_square(3)
-
 print(f'Square: {square}')
 
 
