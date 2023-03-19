@@ -1,4 +1,5 @@
 def palindrome(text):
+    text = text.replace(' ', '')
     length = len(text)
     count = 0
     for i in reversed(range(0, length)):
