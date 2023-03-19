@@ -11,8 +11,14 @@
 # until the element or the end of the list is reached. 
 
 def askForNum(numbers):
+    lenght = len(numbers)
+    i = 0
     for number in numbers:
-        print(number, end = ', ')
+        if(i < lenght -1):
+            print(number, end = ', ')
+        else:
+            print(number)
+        i+= 1
     search = int(input('\nEnter the number you want to search for in the list: '))
     return search
 
