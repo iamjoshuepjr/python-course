@@ -1,13 +1,13 @@
 # Arithmetics Operations Module
+import math 
+from random import randint
 
-def addition(a, b):
-    print(f'Result: {a + b}')
+def square(number):
+    result = math.sqrt(number)
+    return f'Square of {number} = {result}'
 
-def subtraction(a, b):
-    print(f'Result: {a - b}')
+def random(a, b):
+    return randint(a, b)
 
-def multiplication(a, b):
-    print(f'Result: {a * b}')
-
-def division(a, b):
-    print(f'Result: {a / b}')
+result = random(2, 10)
+print(f'Random: {result}')
