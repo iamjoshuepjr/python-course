@@ -8,6 +8,3 @@ def square(number):
 
 def random(a, b):
     return randint(a, b)
-
-result = random(2, 10)
-print(f'Random: {result}')
