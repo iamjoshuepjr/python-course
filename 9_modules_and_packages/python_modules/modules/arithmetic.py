@@ -1,13 +1,13 @@
 # Arithmetics Operations Module
 
 def addition(a, b):
-    print(f'Result: {a + b}')
+    return a + b
 
 def subtraction(a, b):
-    print(f'Result: {a - b}')
+    return a - b
 
-def multiplication(a, b):
-    print(f'Result: {a * b}')
+def multiply(a, b):
+    return a * b
 
 def division(a, b):
-    print(f'Result: {a / b}')
+    return a / b
