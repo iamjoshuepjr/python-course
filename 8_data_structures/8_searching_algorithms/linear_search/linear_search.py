@@ -28,9 +28,9 @@ def linearSearch(numbers, search):
         if(search == numbers[i]):
             position = i
             return True, position
-    return False
+    return False, position
 
-numbers = [81, 72, 63, 54, 45, 36, 27, 18]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 while True:
     search = askForNum(numbers)
     found, position = linearSearch(numbers, search)
