@@ -21,7 +21,6 @@ def currency(function):
 
 # syntax to use the decorator
 # shorter way
-
 @currency
 def net_price(price, tax):
     """
