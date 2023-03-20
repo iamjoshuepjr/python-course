@@ -18,7 +18,23 @@ greet()
 # similar to normal functions, the lambda funtion can also accept arguments
 
 # lambda that accepts one argument
-
 greet_user = lambda name : print(f'Hey there {name}!')
 
 greet_user('Joshuép Jr.')
+
+# Traditional Funtion
+def addition(a, b):
+    return a + b
+
+alias = addition
+result = alias(5, 2)
+print(result)
+
+# lambda
+addition = lambda a, b: a + b
+result = addition(12, 8)
+print(result)
+
+removeSpaces = lambda text: text.replace(' ', '')
+result = removeSpaces('H e l l o , W o r l d !')
+print(result)
