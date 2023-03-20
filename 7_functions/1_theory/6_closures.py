@@ -4,10 +4,19 @@
 # to access variables of the outer function even after 
 # the function os closed. 
 
+# define the outer function by passing a or any argument
 def outer_function(x):
+    # define the inner function by passing a or any argument
     def inner_function(y):
+        # return computing
         return x + y
+        # return the inner function
     return inner_function
 
-print(outer_function(13))  # prints 13
-
+# assing the outer function to a variable.
+# when outer_function is called with an argument (x), 
+# it returns inner_function, which is then assigned to the variable
+closure = outer_function(10)
+# so the inner_function is inside the variable, (variable 'becomes a function') 
+# and it remembers the value of 'x' from outer_function
+print(closure(14))
