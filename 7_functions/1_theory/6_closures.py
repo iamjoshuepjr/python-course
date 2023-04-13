@@ -2,7 +2,7 @@
 #                     Python Closures
 # Python closure is a nested funtion that allows us 
 # to access variables of the outer function even after 
-# the function os closed. 
+# the function is closed. 
 
 # define the outer function by passing a or any argument
 def outer_function(x):
