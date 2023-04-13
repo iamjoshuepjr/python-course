@@ -2,7 +2,7 @@
 #  Recursion is the process of  defining something in terms of itself 
 
 # =========================================================
-#  Pyton recursive function
+#  Python recursive function
 #  Python function can call other functions, 
 #  however, it's even posible for the function call itself
 
