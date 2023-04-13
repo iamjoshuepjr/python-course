@@ -19,10 +19,10 @@ def outer_function(x):
 closure = outer_function(10)
 # so the inner_function is inside the variable, (variable 'becomes a function') 
 # and it remembers the value of 'x' from outer_function
-print(closure(14))
+print('Number:', closure(14))
 
 def validation(a, b):
-    def validate():
+    def validate(): # arguments a and b can be accessed by inner function
         if((a > 0) and (b > 0)):
             return True
         else:
@@ -30,4 +30,4 @@ def validation(a, b):
     return validate
 
 closure = validation(9, 0)
-print(closure())
+print('Bool:', closure())
