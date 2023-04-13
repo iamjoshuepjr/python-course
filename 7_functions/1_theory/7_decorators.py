@@ -1,11 +1,9 @@
-# ==============================================
-#                  Decorators
-# A decorator is a function that takes another 
-# functions as an argument and extends its behavior 
-# without changing the original function explicity.
-# The return of this function is a number. 
+# ==============================================================================================
+#                                     Decorators
+# A decorator is a function that takes another function as an argument and extends its behavior 
+# without changing the original function explicity. The return of this function is a number. 
 # Now, suppose that you need to format the net price using rthe USD currency. 
-# For example 100 becomes $100. To do it, you can use a decorator.
+# For example 100 becomes $100. To do it, you can use a decorator. 
 
 #from functools import wraps
 
