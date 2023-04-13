@@ -7,7 +7,7 @@
 # factories and decoratos functions
 
 def division(a, b):
-    def validate():
+    def validate(): # ++++++++++++++++++++++++++++++++++++++++++
         if((a > 0) and (b > 0)):
             return True
         else:
