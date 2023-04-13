@@ -1,6 +1,6 @@
-# ===================================================================
-#                             Genearators
-# A generator is a function that contains at least one yield statement
+# ======================================================================
+#                               Genearators
+# A generator is a function that contains at least one yield statement.
 # Typically, Python executes a regular function from top to bottom 
 # based on the run-to-completion model. 
 # It means that Python cannot pause a regular function midway and 
@@ -29,7 +29,7 @@ def greeting():
 
 # since the greeting() function contains the yield statements, it's a generator function. 
 # The yield statement is like a return statement in a function. However, there's a big difference.
-# When Python encounters the yield statement, it returns the value specified in the yield. 
+# When Python encounters the yield statement, it returns the value specified in the yield sentence. 
 # In addition, it pauses the execution of the function. 
 # If you 'call' the same function again, Python will resume from where the previous yield statement was encountered. 
 # When you call a generator function, it returns a generator object. 
