@@ -12,35 +12,74 @@
 #  + reusable
 # OOP is based and objects that can interact with each other to build complex systems.
 
-# In OOP, classes define the structure and behavior of objects. 
-# A class can have attributes (data) and methods (functions), which define the behavior of 
-# objects created from the class.
-# To create an object, you define a class first. And then, from the class, you can create 
-# one or more objects. The objects are instances of a class. 
-
 # Define a class
 # A class defines the attributes (variables) and methods (functions) that are common to all objects of that class
 class Dog:
-    sound = 'Woof' # Class attribute
-
-    def __init__(self, name):
-        self.name = name # instance attribute
     
-    # instance methods
+    # define class attributes
+    # Unlike instance attributes, class attributes are shared by all instances of the class.
+    # They are helpful if you want to define class constants or variables that keep track 
+    # of the number of instances of a class.
+
+    sound = 'Woof' # Class attribute
+    counter = 0
+
+    # define and initialize attributes for all instances of a class
+    # the self keyword is the instance of the Dog class
+    def __init__(self, name, age):
+        # instance attributes
+        self.name = name 
+        self.age = age
+        Dog.counter += 1
+
+    # define instance methods
     def bark(self):
         ''' Make the dog bark '''
-        print(f'{self.name} says {self.sound}!')
+        print(f'{self.name}, says {self.sound}!')
         
     def greet(self):
         ''' Make the dog greet its owner '''
-        print(f'Hello!, I\'m {self.name}, and I\'m greeting you!')
+        print(f'Hello!, I\'m {self.name}, I\'m {self.age} years old, and I\'m greeting you!')
 
-# instances of Dog class (objects)
-dog = Dog('Fido')
+# When you create a Dog object, Python autamtically calls the _init__ method 
+# to initialize the instance attributes. 
 
-# Access to the attributes
-print(f'Dog Name: {dog.name}') 
+# Instance of Dog class (object)
+# The dog object now has the name and age attributes
+dog = Dog('Fido', 2)
+
+# Access to the instance attributes
+# dot notation (object.attribute/method)
+print(f'\nDog Name: {dog.name}') 
+print(f'Dog Age: {dog.age}') 
 
 # Access instance methods
 dog.bark()
 dog.greet()
+
+# Access to the class attributes
+print(f'\n(Class Attribute accessed by class)\
+    \nDog Counter: {Dog.counter}\
+    \nDog Sound: {Dog.sound}!')
+
+# Access to the class attribute for an instance
+print(f'\n(Class Attribute accessed by instance [{dog.counter}])\
+    \nDog Counter: {dog.counter}\
+    \nDog Sound: {dog.sound}!')
+
+# Instance of Dog class (object)
+dog2 =  Dog('Max', 3)
+
+# Access to the instance attributes
+# dot notation (object.attribute/method)
+print(f'\nDog Name: {dog2.name}') 
+print(f'Dog Age: {dog2.age}') 
+
+# Access instance methods
+dog2.bark()
+dog2.greet()
+
+# Access to the class attribute for an instance
+print(f'\n(Class Attribute accessed by instance [{dog2.counter}])\
+    \nDog Counter: {dog2.counter}\
+    \nDog Sound: {dog2.sound}!')
