@@ -40,6 +40,16 @@ class Dog:
     def greet(self):
         ''' Make the dog greet its owner '''
         print(f'Hello!, I\'m {self.name}, I\'m {self.age} years old, and I\'m greeting you!')
+    
+    # define class methods
+    # like a class attribute, a class method is shared by all instanbces of the class. 
+    # The first arguments of a class method is the class itself. By convention, its name is cls. 
+    # Python automatically passes this argument to the class method. 
+    # Also, you use the @classmethod decorator to decorate a class method. 
+
+    @classmethod
+    def create_anonymous(cls):
+        return Dog('Anonymous', 5)
 
 # When you create a Dog object, Python autamtically calls the _init__ method 
 # to initialize the instance attributes. 
@@ -83,3 +93,7 @@ dog2.greet()
 print(f'\n(Class Attribute accessed by instance [{dog2.counter}])\
     \nDog Counter: {dog2.counter}\
     \nDog Sound: {dog2.sound}!')
+
+# Access to the class method
+print(f'Anonymous Dog Name: {Dog.create_anonymous().name}')
+print(f'Anonymous Dog Age: {Dog.create_anonymous().age}')
