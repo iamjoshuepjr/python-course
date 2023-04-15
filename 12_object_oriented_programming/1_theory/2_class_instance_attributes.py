@@ -1,10 +1,14 @@
 class Cat:
-    # Class attribute
-    species = 'Felis Catus'  
+    # Class attributes are variables that are defined at the class level and are shared among all instances of the class. 
+    # They are usually used to define constants or default values that all instances should have
+
+    species = 'Felis Catus' # class attribute
     # This attribute is shared among all instances of the Cat class
 
     def __init__(self, name, age):
-        # instance attributes
+        # Instances attributes are variables that are specific to each instance of the class. 
+        # They are defined inside the __init__ method and are usually used 
+        # to store data that is unique to each instance of the class.
         self.name = name    
         self.age = age      
         self.sound = 'Meow' 
