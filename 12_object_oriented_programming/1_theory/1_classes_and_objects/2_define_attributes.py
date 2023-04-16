@@ -64,4 +64,3 @@ print(f'Object Class: {type(Dog)}')
 
 # It's an instance of the type class
 print(f'Is the object {Dog.__name__} an instance of {type.__name__}? {isinstance(Dog, type)}')
-
