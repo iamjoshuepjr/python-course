@@ -1,4 +1,4 @@
-# Everythin in python is an object including a class.
+# Everything in python is an object including a class.
 # When you define a clas using the clas keyword, Python creates an object 
 # with the same name as the class's name.
 
