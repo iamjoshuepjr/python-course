@@ -70,7 +70,8 @@ print(f'Object: {Request.send(http_request)}')
 
 # For this reason, a method of an object always has the object as the first argument. By convention, it's called self:
 class Person:
-    def walk(self):
+     # instance method
+     def walk(self):
         return 'Walking!'
 
 #  print(f'Action: {Person.walk()}') -> TypeError: Person.walk() missing 1 required positional argument: 'self' 
