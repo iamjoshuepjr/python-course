@@ -54,20 +54,22 @@ person2 = Person()
 person.name = 'Joshuép Jr.'
 # However if you create another Person object, the new object won't have the name attribute
 
-print(f'Name: {person.name}')  # prints: Name: Joshuép Jr.
+print(f'Name Attribute: {person.name}')  # prints: Name: Joshuép Jr.
 # print(f'Name: {person2.name}') # AttributeError: 'Person2' object has no attribute 'name'
 
 # Printing the class
-print(f'Class Name: {Person}') # prints <class '__main__.Person'>
+print(f'Class Name (Way 1): {Person}') # prints <class '__main__.Person'>
 
 # A class is also an object in Python
-# Everythind in Python is an object, including classes. 
-# When you define the Person clas, Python creates an object with the name Person. The Person object has attributes. 
+# Everything in Python is an object, including classes. 
+# When you define the Person class, Python creates an object with the name Person. The Person object has attributes. 
 # For example, you can find its name using the __name__ attibute.
-print(f'Class Name: {Person.__name__}')
+print(f'Class Name (Way 2): {Person.__name__}')
 
-print(f'Type: {type(Person)}')
+print(f'Type class Person: {type(Person)}')
 
+# object memory address
+print(f'Object Memory Address: {person}')
 # To get an identity of an object, you use the id() function
 # The id of an object is unique. The id() returns the memory address of an object. 
 print(f'Object id: {id(person)}')
