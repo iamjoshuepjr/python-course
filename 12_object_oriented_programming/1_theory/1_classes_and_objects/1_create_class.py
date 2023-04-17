@@ -27,6 +27,8 @@
 class Person: 
     # attributes
     # methods
+    # this sentence defines the Person class and the Person object. 
+    # The Person object has the __name__ property.
 
     # Currently the Person class is incomplete
     pass # the pass statement indicates you'll add more code it later 
@@ -63,7 +65,7 @@ print(f'Class Name (Way 1): {Person}') # prints <class '__main__.Person'>
 # A class is also an object in Python
 # Everything in Python is an object, including classes. 
 # When you define the Person class, Python creates an object with the name Person. The Person object has attributes. 
-# For example, you can find its name using the __name__ attibute.
+# For example, you can find its name using the __name__ attribute.
 print(f'Class Name (Way 2): {Person.__name__}')
 
 print(f'Type class Person: {type(Person)}')
@@ -80,3 +82,10 @@ print(f'Hexa Address: {hex(id(person))}')
 # The person object is an instance of the Person class. 
 # The isinstance() function returns True if an abject is an intance of a class.
 print(f'Is the object person an instance of {Person.__name__}? {isinstance(person, Person)}')
+
+# Desmostrating classes are objetct too
+print(f'\nClasses are objects too!\nObject Name Attribute: {Person.__name__}')
+print(f'Object Class: {type(Person)}')
+
+# It's an instance of the type class
+print(f'Is the object {Person.__name__} an instance of {type.__name__} class? {isinstance(Person, type)}')
