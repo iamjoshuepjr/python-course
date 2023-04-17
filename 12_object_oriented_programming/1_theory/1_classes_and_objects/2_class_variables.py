@@ -1,19 +1,40 @@
+# ======================================================================================================
+#                                         Class variables
+# ======================================================================================================
 # In Object-Oriented Programming, a class variable (also known as a static variable) 
-# is a variable that belongs to a class rather than an instance of that class. 
-# Class variables are variables that are defined within a class but outside of any method or constructor. 
-# They are shared by all instances (objects) of that class and can be accessed via the class name or any instance of the class.
+# A Class variable, is a variable that belongs to a class rather than an instance of that class.  
+# 
+# ======================================================================================================
+#                                 Class variables Characteristics
+# ======================================================================================================
+# 1. Shared among all instances (objects):
+#  + Any changes made to the class variable will be reflected in all instances of the class.
+#
+# 2. Defined outside of methods: 
+#  + They're typically defined at the beginning of the class definition, before any methods.
+#
+# 3. Accessed using the class name or an instance:
+#  + They can be accessed using either the class name or an instance of the class.
+#  Accessing Syntax:
+#  Using class name:  ClassName.variable_name 
+#  Using an instance: instance_name.variable_name 
+#
+# 4. Can be modified using the class name:
+#  + Any changes made to the class variable using the class name will be reflected in all the instances. 
+# 
+# 5. Useful for storing shared data: 
+#  + Class variables are often used to store data that is shared amonf all instances of the clas.
+
 
 from pprint import pprint
 
 class Dog():
-            
-    # Class attributes are bound to the class. They are shared by all instances of that class.
-    # They are helpful if you want to define class constants or variables that keep track of the number of instances of a class.
-
-    # To define class attributes, you simply declare it within the class body.
+        
+    # To define class variables, you simply declare it within the class body.
+    # Class variables
     species = 'Canis familiaris'
     legs = 4
-    sound = 'Woof' # Class attribute
+    sound = 'Woof' 
     counter = 0
 
 # Get values of class varibales
@@ -21,33 +42,55 @@ class Dog():
 # Access to the class attributes
 # dot notation (class.attribute)
 
-print(f'\n(Class Attribute accessed by class)\
-        \nDog Counter: {Dog.counter}\
-        \nDog Sound: {Dog.sound}!')
+dog = Dog() # instance
+
+print(f'\n(Class Variables accessed by class)\
+        \nDog Species: {Dog.species}\
+        \nDog Legs: {Dog.legs}\
+        \nDog Sound: {Dog.sound}\
+        \nDog Counter: {Dog.counter}')
+
+print(f'\n(Class Variables accessed by instance of the class)\
+        \nDog Species: {dog.species}\
+        \nDog Legs: {dog.legs}\
+        \nDog Sound: {dog.sound}\
+        \nDog Counter: {dog.counter}')
 
 # Another way to get the value of a class varibale is to use the getattr() function. 
 # The getattr() function accepts an object and a variable name. 
 # It returns the value of the class variable.
 
+dog_species = getattr(Dog, 'species')
+dog_legs = getattr(Dog, 'legs')
 dog_sound = getattr(Dog, 'sound')
-print(f'\n(Class Attribute accessed by class with getattr()\
-        \nDog Sound: {dog_sound}!')
+dog_counter = getattr(Dog, 'counter')
 
-# Set values for class variables
-# To set a value for a class variables, you use the dot notation (ClassName.attribute)
-Dog.sound = 'Meow'
+print(f'\n(Class Variables accessed by class with getattr()\
+        \nDog Species: {dog_species}\
+        \nDog Legs: {dog_legs}\
+        \nDog Sound: {dog_sound}\
+        \nDog Counter: {dog_counter}')
+
+# Set values for class variables:
+# To set a value for a class variables, you use the dot notation (ClassName.attribute), 
+# and simply reassigning the variable.
+Dog.species = 'Domesticated canine'
+Dog.sound = 'GrrrRrrr'
+Dog.legs = 6
 
 # or you can use the setattr() function
 setattr(Dog, 'counter', 5)
 
 print(f'\n(Class Attribute setting new values:)\
-        \nDog Sound: {Dog.sound}!\
-        \nDog Counter: {Dog.counter}') 
+        \nDog Species: {Dog.species}\
+        \nDog Legs: {Dog.legs}\
+        \nDog Sound: {Dog.sound}\
+        \nDog Counter: {Dog.counter}')
 
 # Class variable storage
 # Python store class variables in the __dict__ attribute. 
 # The __dict__ attribute is a mapping proxy, which is a dictionary 
-pprint(f'Dog Varible Storage: {Dog.__dict__}')
+pprint(f'\nDog Varible Storage: {Dog.__dict__}')
 
 # Delete class variables
 # To delete a class variable at runtime, you use the delattr() function
