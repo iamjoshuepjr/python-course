@@ -78,3 +78,31 @@ class Person:
 
 person = Person()
 print(f'Action: {person.walk()}')
+
+class Cat:
+     # instance variables (attributes)
+     def __init__(self, name, species, age):
+          self.name = name
+          self.species = species
+          self.age = age
+     
+     # instance method
+     def get_info(self):
+          return f'I\'m {self.name} and I\'m a {self.species} dog.'
+     
+     # instance method
+     def meow(self):
+          return f'{self.name} says meow!'
+     
+     # instance method
+     def sleep(self):
+          return f'{self.name} is sleeping!'
+     
+     def eat(self, food):
+          return f'{self.name} is eating {food}.'
+
+# instance (object)
+my_cat = Cat('khloe', 'Siamese', 2)
+print(f'Sound: {my_cat.meow()}')
+print(f'At 4:00 p.m., {my_cat.sleep()}')
+print(f'After take a rest, {my_cat.eat("tuna")}')
