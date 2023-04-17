@@ -11,7 +11,7 @@ print('.lower() method')
 lower = "THIS TEXT IS IN UPPERCASE LETTERS, SO WITH THE LOWER() FUNCTION, IT WILL BECOME LOWERCASE."
 print(f'Original Text: {lower}')
 # it'll print: this text will become lower case.
-print(f'Text Applied .lower() method: '{lower.lower()})
+print(f'Text Applied .lower() method: {lower.lower()}')
 print()
 
 # upper() method -> converts a string into upper case
