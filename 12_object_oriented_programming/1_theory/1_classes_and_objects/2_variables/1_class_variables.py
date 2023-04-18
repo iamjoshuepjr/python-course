@@ -1,8 +1,8 @@
 # ======================================================================================================
 #                                         Class variables
 # ======================================================================================================
-# In Object-Oriented Programming, a class variable (also known as a static variable) is a variable that 
-# belongs to a class rather than an instance of that class.  
+# In Object-Oriented Programming, a class variable is a variable that belongs to a class rather 
+# than an instance of that class.  
 # ======================================================================================================
 #                                 Class variables Characteristics
 # ======================================================================================================
