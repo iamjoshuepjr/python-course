@@ -182,10 +182,61 @@ print(f'\n---------------------------------------\
       \n- Trying to access instance variables -\
       \n---------------------------------------')
 
-print(f'\nName: {student2.name}\
-        \nAge: {student2.age}\
-        \nGpa: {student2.gpa}\
-        \nMajor: {student2.major}\
-        \nCourses: {student2.courses}\
-        \nEmail: {student2.email}\
-        \nNationality: {student2.nationality}') 
+#  print(f'\nName: {student2.name}\
+#         \nAge: {student2.age}\
+#         \nGpa: {student2.gpa}\
+#         \nMajor: {student2.major}\
+#         \nCourses: {student2.courses}\
+#         \nEmail: {student2.email}\
+#         \nNationality: {student2.nationality}') 
+
+
+# =========================================================================
+#              Access Instance Variables From Another Class
+# =========================================================================
+# We can access instance of one class from another class 
+# using object reference. It is useful when we implement the concept of 
+# inheritance, and we want to access the parent class intance variable 
+# from child class.
+
+print(f'\n---------------------------------------\
+      \n- Trying to access instance variables -\
+      \n---------------------------------------')
+
+class Vehicle:
+    def __init__(self):
+        # instance variable
+        self.egine = '1500cc'
+
+# inheritance
+class Car(Vehicle):
+    def __init__(self, max_speed):
+        # call parent class __init__()
+        super().__init__()
+        self.max_speed = max_speed
+    
+    def display(self):
+        # access parent class instance variable engine
+        print(f'\nEngine: {self.egine}\
+                \nMax Speed: {self.max_speed}')
+
+# object of Car class
+car = Car(240)
+car.display()
+
+# =====================================================================
+#              List all Instance Variables of a Object
+# =====================================================================
+# We can get the list of all the instance variables the object has. 
+# Use the __dict__ function of an object to get all the instance 
+# variables along with their value. 
+# The __dict__ function returns a dictionary that contains 
+# variable names as a key and variable value as a value.
+print(f'\n-------------------------------\
+      \n- List all instance variables -\
+      \n-------------------------------')
+
+print(student2.__dict__)
+
+for key_value in student2.__dict__.items():
+        print(f"{key_value[0]} = {key_value[1]}")
