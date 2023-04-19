@@ -117,7 +117,7 @@ student.age = 25
 print(f'\nAfter:\
         \nName: {student.name}\
         \nAge: {student.age}')
-        
+
 # =================================================================================
 #            Dynamically add Instance Variables to a Object
 # =================================================================================
@@ -136,9 +136,56 @@ print(f'Before:\
         \nAge: {student2.age}')
 
 # adding a new instance variable
-
-student2.marks = 4.8
+student2.gpa = 4.8
 print(f'\nAfter:\
         \nName: {student2.name}\
         \nAge: {student2.age}\
-        \nMark: {student2.marks}')
+        \nMark: {student2.gpa}')
+
+# =========================================================================
+#            Dynamically Delete Instance Variables 
+# =========================================================================
+# We use the del statement and delattr() function to delete the attribute 
+# of an object. Both of the them do the same thing.
+# 
+# Using the following sintax: 
+#  + del statement: The del keyword is used to delete objects. 
+#    In python everything it's an object, so the del keyword can also 
+#    be used to delete variables, list, or part of a list, etc. 
+#  
+#  + delattr() function: Used to delete an instance variable dynamically. 
+
+# Before delete attributes, I'm goning to add more attributes (dinamically, too)
+student2.major = 'Computer Science'
+student2.phone = "555-555-1234"
+student2.courses = ['Introduction to Python', 'Data Structures', 'Database Systems']
+student2.email = "johndoe@example.com"
+student2.nationality = "American"
+
+print(f'\nNew values to student2:\
+        \nName: {student2.name}\
+        \nAge: {student2.age}\
+        \nGpa: {student2.gpa}\
+        \nMajor: {student2.major}\
+        \nCourses: {student2.courses}\
+        \nEmail: {student2.email}\
+        \nNationality: {student2.nationality}')
+
+# Now, let's go delete them!
+
+del student2.email # AttributeError: 'Student' object has no attribute 'email'
+del student2.nationality # AttributeError: 'Student' object has no attribute 'natioality'
+
+delattr(student2, 'courses') # AttributeError: 'Student' object has no attribute 'courses'
+
+print(f'\n---------------------------------------\
+      \n- Trying to access instance variables -\
+      \n---------------------------------------')
+
+print(f'\nName: {student2.name}\
+        \nAge: {student2.age}\
+        \nGpa: {student2.gpa}\
+        \nMajor: {student2.major}\
+        \nCourses: {student2.courses}\
+        \nEmail: {student2.email}\
+        \nNationality: {student2.nationality}') 
