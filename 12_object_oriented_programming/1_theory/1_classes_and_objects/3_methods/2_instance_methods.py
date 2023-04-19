@@ -1,84 +1,40 @@
+# ===========================================================================================================
+#                                         Instance methods
+# ===========================================================================================================
+# In Object-Oriented Programming, an instance methos is a method that is associated with an 
+# instance of a class. 
+# In other words, it's a function that can be called on an object created from a class. 
+# Intance methods can access and modify the state of the object on which they are called, as well as 
+# the state of the class to which that object belongs.
 # By definition, a method is a function that is bound to an instance of a class.
 # No matter the paradigm used, methods can carry out an action. 
 # That action can be a computation that only relies on inputs, or it can change the values of a variable.
-# Methods are one of the primary means by which objects interact with each other and with the outside world.
+# Methods are one of the primary means by which objects interact with each other and with the outside world. 
 
-class Request:
-    
-    # When you define a function inside a class, it's purely a funcition. 
-    # However, when you accses that function via an object, the function becomes a method.
-    
-    def send(*args): 
-        return 'sent!', args
+# To define an instance method in a class, you need to declare it inside the clas 
+# and use the 'self' keyword as the first parameter in the method signature. 
+# This parameter refers to the object on which the method is called and allows the method to access 
+# the object's properties and other instance methods.
 
-# you can call the send() function via the Request class
-print('\n+------------------------------+\
-     \n- Accessing function via Class -\
-     \n+------------------------------+')
-print(f'Request status: {Request.send()}')
-
-# The send() is a function object, which is an instance of the function class.
-print('\n+-----------------------------+\
-     \n- Functions are objects, too! -\
-     \n+-----------------------------+')
-
-print(f' * send() method Instance of: {Request.send}\
-    \n * Type of send() function: {type(Request.send)}')
-
-# Instance of Request 
-print('\n+-------------------------------+\
-     \n- Now function becomes a method -\
-     \n+-------------------------------+')
-http_request = Request()
-print(f'* http_request.send Type: {http_request.send}') #<bound method Request.send of <__main__.Request object at 0x00000xxxxxxxxxx>>
-
-# So the http_request.send is not a function like Request.send
-# The reason is that the type of Request.send is a function while the type of the http_request.send is a method
-print('\n+-------------------------------------------+\
-     \n- Diference between a function and a method -\
-     \n+-------------------------------------------+')            # function send        # method send
-print(f'* Request.send Type: {type(Request.send)}\
-        \n* http_request Type: {type(http_request.send)}\
-        \n+---------------------------------------------------------------+\
-        \n- Is Request.send the same object than http_request.send? {type(Request.send) is type(http_request.send)} -\
-        \n+---------------------------------------------------------------+') # False
-
-# So when you define a function inside a class, it’s purely a function. 
-# However, when you access that function via an object, the function becomes a method.
-# Therefore, a method is a function that is bound to an isntance of a class.
-# If you call the send() function via object, you'll get a TypeError
-
-# The send() function doesn't receive any arguments. However, if you call the send() function from an instance of Request class, the args is not empty:
-print(f'Calling the function via instace: {http_request.send()}') 
-# I must redefine the function args adding the args it accepts, else will I get:
-# TypeError: Request.send() takes 0 positional arguments but 1 was given
-# Because the http_reques.send is a method that is bound to the http_request object, 
-# Python always implicity passes the object to the method as the first argument.
-
-# send() method recives an object which is the http_request, which is the object that it is bound to.
-print('\n+-----------+\
-     \n- Object ID -\
-     \n+-----------+') 
-print(f'* ID: {hex(id(http_request))}')
-print(f'* Object passed to the send function: {http_request.send()}')
-
-# The http_request object is the same as the one Pytho passes to the send() method as the first argument because they have the same memory address. 
-# In other words, you can access the instabce of the class as the first argument inside the send() method.
-
-print(f'Object: {http_request.send()}')
-print(f'Object: {Request.send(http_request)}')
-
-# For this reason, a method of an object always has the object as the first argument. By convention, it's called self:
 class Person:
      # instance method
+     # When you define a function inside a class, it's purely a funcition. 
+     # However, when you accses that function via an object, the function becomes a method.
      def walk(self):
         return 'Walking!'
 
-#  print(f'Action: {Person.walk()}') -> TypeError: Person.walk() missing 1 required positional argument: 'self' 
-#  Occurs because the method walk defined in the Person class expects an instance of the Person class to be passed as the first argument, conventionally referred to as self.
-
+# =====================================================================
+#              Calling an Instance Method
+# =====================================================================
+# We use the dot notation to execute the action (block of code) 
+# defined in the instance method. 
+# Syntax: object.instance_method() 
+print(f'\n-----------------------------\
+      \n- Calling an Intance Method -\
+      \n-----------------------------')
+print('Person Class:')
 person = Person()
-print(f'Action: {person.walk()}')
+print(f'Person is performing the action. It\'s {person.walk()}')
 
 class Cat:
      # instance variables (attributes)
@@ -88,6 +44,10 @@ class Cat:
           self.age = age
      
      # instance method
+     # it can access or modify the object state by changing the value of a instance variable
+     # when we create a class, instance methods are used regulary
+     # to work with an instance method, we use the self keyword as the first parameter, which refers to the current object
+     # any method we create in a class will automatically be created as an instace method unless we explicity tell Python that is a class or static method
      def get_info(self):
           return f'I\'m {self.name} and I\'m a {self.species} dog.'
      
@@ -104,6 +64,142 @@ class Cat:
 
 # instance (object)
 my_cat = Cat('khloe', 'Siamese', 2)
+print('----------------------------------------------\
+      \nCat Class:')
 print(f'Sound: {my_cat.meow()}')
 print(f'At 4:00 p.m., {my_cat.sleep()}')
-print(f'After take a rest, {my_cat.eat("tuna")}')
+print(f'After take a rest, {my_cat.eat("tuna")}\
+      \n----------------------------------------------')
+
+# ============================================================================
+#            Modify Instance Variables inside Instance Methods
+# ============================================================================
+# Let's creae the instance method update() method to modify the student age 
+# and roll number when student data details change.
+
+
+class Student:
+    def __init__(self, roll_no, name, age):
+        # instance variables
+        self.roll_no = roll_no 
+        self.name = name 
+        self.age = age
+
+    # instance method
+    def show(self):
+        print(f"Roll Number: {self.roll_no}\
+              \nName: {self.name}\
+              \nAge: {self.age}")
+    
+    # instance method to modify instance variables
+    def update(self, roll_no, age):
+        self.roll_no = roll_no
+        self.age = age
+
+print(f'\n-----------------------------------------------------\
+      \n- Modify Instance Variables inside Instance Methods -\
+      \n-----------------------------------------------------')
+
+print(f'Student Class\
+     \n* Display original object')
+student = Student(1234, "Andrea", 24)
+student.show()
+
+print(f'\n* Display modified object')
+student.update(5678, 25)
+student.show()
+print('----------------------------------------------')
+
+# =================================================================================
+#            Dynamically add Instance Methods to an Object
+# =================================================================================
+# Usually, we add methods to a class body when defining a class. However, Python is
+# dynamic language that allows us to add or delete instance methods at runtime. 
+# Therefore, it's helpful in the followinf scenarios:
+# + When class is in a different file, and you don't have access 
+#   to modify the class structure
+# + You wanted to extend the class functionality without changind its basic structure 
+#   because many systems use the same structure.
+
+# We use the types module's MethodType() to add a method to an object
+import types
+
+class Car:
+    def __init__(self, fuel_level):
+        # intance variables
+        self.fuel_level = fuel_level
+    
+    def drive(self, distance):
+        if self.fuel_level >= distance/10:
+            print(f"Driving for {distance} km")
+            self.fuel_level -= distance/10
+        else:
+            print("No enough fuel to drive that far!")
+
+    def honk(self):
+        return 'Hoonk hoonk'
+
+# define:
+# + a refuel method 
+# + a check_fuel 
+# + a get_max_distance as a separate functions
+
+def refuel(self, liters):
+    self.fuel_level += liters
+
+def check_fuel(self):
+    print(f"Fuel Level: {self.fuel_level}")
+
+def get_max_distance(self):
+    return self.fuel_level * 10
+
+# create a Car instance and 
+car = Car(10)
+
+# dynamically add the methods to it
+car.refuel = types.MethodType(refuel, car)
+car.check_fuel = types.MethodType(check_fuel, car)
+car.get_max_distance = types.MethodType(get_max_distance, car)
+
+# now we can call the methods on the car instance
+print(f'\n-------------------------------------------------\
+      \n- Dynamically add Instance Methods to an Object -\
+      \n-------------------------------------------------')
+print('Initial Fuel Leve:')
+car.check_fuel()
+print('(Instance Method).')
+car.drive(50)
+print('\n(Methods Added Dynamically)')
+print('* check_fuel()')
+car.check_fuel()
+print('* get_max_distance()')
+print(f'Max. Distance: {car.get_max_distance()}')
+car.refuel(53)
+print(f'(New Instance Variable Value by modifing values by an dynamically added method)\
+      \nNew Fuel Level: {car.fuel_level} lts.')
+
+# =========================================================================
+#            Dynamically Delete Instance Methods 
+# =========================================================================
+# We can dynamically delete the instance method from the class. 
+# In Python, there are two ways to delete method: 
+# del statement and delattr() function to delete the method of an object. 
+# Both of the them do the same thing.
+# 
+# Using the following sintax: 
+#  + del statement: The del keyword is used to delete objects. 
+#    In python everything it's an object, so the del keyword can also 
+#    be used to delete variables, list, or part of a list, etc. 
+#  
+#  + delattr() function: Used to delete an instance variable dynamically. 
+
+print(f'\n---------------------------------------------\
+      \n- Trying to access instance deleted methods -\
+      \n---------------------------------------------')
+print('Using del statement:')
+print('* get_max_distance()')
+print('Using delattr() function:')
+del car.get_max_distance
+delattr(car, 'refuel')
+# print(f'Max. Distance: {car.get_max_distance()}') # AttributeError: 'Car' object has no attribute 'get_max_distance
+print(f'Refuel: {car.refuel(29)}') # AttributeError: 'Car' object has no attribute 'refuel'
