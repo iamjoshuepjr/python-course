@@ -106,8 +106,6 @@ print(f'\n---------------------------------\
       \n- Modifying instance attributes -\
       \n---------------------------------')
 
-
-
 # Set values for instance variable:
 # To set a value for an instance variable, you use the dot notation (object.attribute), 
 # and simply reassigning the variable's value.
@@ -119,7 +117,7 @@ print(f'\nAfter:\
         \nAge: {student.age}')
 
 # =================================================================================
-#            Dynamically add Instance Variables to a Object
+#            Dynamically add Instance Variables to an Object
 # =================================================================================
 # We can add instance variables from the outside of a class to a particular object 
 # Using the following sintax: 
@@ -225,7 +223,7 @@ car = Car(240)
 car.display()
 
 # =====================================================================
-#              List all Instance Variables of a Object
+#              List all Instance Variables of an Object
 # =====================================================================
 # We can get the list of all the instance variables the object has. 
 # Use the __dict__ function of an object to get all the instance 
