@@ -36,7 +36,7 @@ class Dog():
     sound = 'Woof' 
     counter = 0
 
-# Get values of class varibales
+# Get values of class variables
 # To get values of class variables, you use the dot notation (ClassName.attribute)
 # Access to the class attributes
 # dot notation (class.attribute)
@@ -71,7 +71,7 @@ print(f'\n(Class Variables accessed by class with getattr()\
         \nDog Counter: {dog_counter}')
 
 # Set values for class variables:
-# To set a value for a class variables, you use the dot notation (ClassName.attribute), 
+# To set a value for a class variable, you use the dot notation (ClassName.attribute), 
 # and simply reassigning the variable.
 Dog.species = 'Domesticated canine'
 Dog.sound = 'GrrrRrrr'
@@ -93,7 +93,7 @@ pprint(f'\nDog Varible Storage: {Dog.__dict__}')
 
 # Delete class variables
 # To delete a class variable at runtime, you use the delattr() function
-
-# delattr(Dog, 'counter') # AttributeError: type object 'Dog' has no attribute 'counter'
-print(f'(Delete class attributes)\
-     \nDog Counter: {Dog.counter}')
+print('(Delete class attributes)')
+delattr(Dog, 'counter') 
+print(f'(Deleted class attributes)')
+# print(f'\nDog Counter: {Dog.counter}') # AttributeError: type object 'Dog' has no attribute 'counter'
