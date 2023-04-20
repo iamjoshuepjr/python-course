@@ -20,12 +20,15 @@ class Class:
     # We must explicitly tell Python that it's a static method using the @staticmethod decorator, or staticmethod() function
     def example(x):
         print(f'Inside static method {x}')
-
+print("Calling Static Method\
+    \n------------------------")
 # call static method
+print("* Via class") 
 Class.example(24)
 
 # it can be called using object
 my_class = Class()
+print("* Via object") 
 my_class.example(16)
 
 class Employee(object):
@@ -53,6 +56,9 @@ class Employee(object):
             print(f'Completed {taks}')
 
 employee = Employee('Kelly', 12000, 'ABC Project')
+print("\n----------------------------------------------------\
+       \n- Accessing Istance Variables from Static Methods. -\
+       \n----------------------------------------------------")
 employee.work()
 
 # =====================================================================
@@ -66,18 +72,20 @@ employee.work()
 #   methods (separate for each object) which will consume more memory. 
 #   On the other hand static method has only one copy per class.
 
+print("\n----------------------------------\
+       \n- Advantages of a Static Method. -\
+       \n----------------------------------")
+
 ava = Employee('Ava', 12000, 'ABC Project')
 gia = Employee('Gia', 9800, 'XYZ Project')
 
 # Separate copy of instance method is created for each object.
-print(f'(Instance Method)\
+print(f'* (Instance Method)\
     \nIs ava.work the same gia.work method? {ava.work is gia.work}') # false  
 
 # Only one copy is created
-print(f'(Static Method)\
+print(f'* (Static Method)\
     \nIs ava.gather_requirement the same gia.gather_requirement? {ava.gather_requirement is gia.gather_requirement}') # true  
-
-print(f'()')
 
 # =====================================================================
 #              Call static method from another method
@@ -99,8 +107,46 @@ class Test:
         cls._static_method_2()
 
 # call class method
+print("\n-------------------------------------------------\
+       \n- Callining Static methods on Instance Methods. -\
+       \n-------------------------------------------------")
+print('* Example 1: ')
 Test.class_method_1()
 
+class BankAccount:
+    # class variable for interest rate
+    INTEREST_RATE = 0.5
+
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+
+    # static method to calculate insterest on a given balance
+    @staticmethod
+    def calculate_interest(balance):
+        return balance * BankAccount.INTEREST_RATE
+    
+    # class method to create a new account with a staring balance
+    @classmethod
+    def create_account(cls, staring_balance):
+        account_number = cls.generate_account_number()
+        return cls(account_number, staring_balance)
+
+    # static method to generate a new account number
+    @staticmethod
+    def generate_account_number():
+        return 'uuid.uuid4'
+
+# create a new bank account using the class method
+new_account = BankAccount.create_account(1000)
+
+# calculate the interest on the account balance using the static method
+interest = BankAccount.calculate_interest(new_account.balance)
+print('* Example 2 (BankAccount class): ')
+print(f"Account number: {new_account.account_number}\
+     \nStaring balance: ${new_account.balance}\
+     \nInterest earned: ${interest:.2f}")
+     
 # Utility functions 
 # Static methods have limited use because they don't have access 
 # to the attributes of an object (instance variables) and class attributes (class variables).
@@ -147,6 +193,9 @@ class TemperatureConverter:
             symbol = '°K'
         
         return f'{value}{symbol}'
-f = TemperatureConverter.celcius_to_fahrenheit(35)
-print(TemperatureConverter.format(f, TemperatureConverter.FAHRENHEIT))
 
+f = TemperatureConverter.celcius_to_fahrenheit(35)
+print("\n----------------------\
+       \n- Utility Functions. -\
+       \n----------------------")
+print(TemperatureConverter.format(f, TemperatureConverter.FAHRENHEIT))
