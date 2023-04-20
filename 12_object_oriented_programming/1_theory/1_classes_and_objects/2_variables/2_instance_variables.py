@@ -41,10 +41,6 @@
 #    This allows the variables to be set to specific values when an object is created. 
 #    However, instance variables can also set or modified later or by calling a method on the object.
 
-print(f'\n----------------------------------\
-      \n- Displaying instance attributes -\
-      \n----------------------------------')
-
 class Person:
     def __init__(self, name, age):
         # instance variables
@@ -54,6 +50,10 @@ class Person:
 person = Person("Joshuép Jr", 24)
 person2 = Person("Dayanna", 24)
 
+print(f'\n----------------------------------\
+      \n- Displaying instance attributes -\
+      \n----------------------------------')
+      
 print(f'Hi! I\'m {person.name}. I\'m {person.age} years old!')
 print(f'Hi! I\'m {person2.name}. I\'m {person2.age} years old!')
 
