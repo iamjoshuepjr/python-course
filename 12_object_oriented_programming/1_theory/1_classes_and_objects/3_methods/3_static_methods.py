@@ -3,10 +3,12 @@
 # ==========================================================================================================
 # In Python OOP, static methods are methods that belongs to a class rather than an instance of the class. 
 # Therefore, we can call it using the class name.
-# Unlike instance methods, or class methods, they do not receibe any reference to the class or instance, 
-# so they do not have access to class-level or instance-level data. 
-# Therefore it cannot modify the state of the object or class. 
+# Unlike instance methods, or class methods 
+# + They do not receibe any reference to the class or instance, 
+#   so they do not have access to class-level or instance-level data. 
+#   Therefore it cannot modify the state of the object or class. 
 # A static method is a general utility method that performs a task in isolation.
+# ==========================================================================================================
 # Static methods can be useful for implementing utility functions that are related to the class but do not 
 # require access to instance-specific data. They can also be used to create factory methods that return new 
 # instances of the class, or implement class-level validation or type-checking.
@@ -34,8 +36,8 @@ class Employee(object):
         self.project_name = project_name
 
     @staticmethod
-    def gather_requirement(project_name):
-        if project_name == 'ABC Project':
+    def gather_requirement(project):
+        if project == 'ABC Project':
             requirement = ['task_1', 'task_2', 'task_3']
         else:
             requirement = ['task_1', 'task_2']
@@ -44,6 +46,8 @@ class Employee(object):
     # instance method
     def work(self):
         # call static method from instance method
+        # the static method gather_requirement() can access the instance variable self.project_name 
+        # because it is passed as an argument to the method from an instance method work().
         requirement = self.gather_requirement(self.project_name)
         for taks in requirement:
             print(f'Completed {taks}')
@@ -65,7 +69,15 @@ employee.work()
 ava = Employee('Ava', 12000, 'ABC Project')
 gia = Employee('Gia', 9800, 'XYZ Project')
 
-print(f'Is ava.work the same gia.work {ava.work is gia.work}?')
+# Separate copy of instance method is created for each object.
+print(f'(Instance Method)\
+    \nIs ava.work the same gia.work method? {ava.work is gia.work}') # false  
+
+# Only one copy is created
+print(f'(Static Method)\
+    \nIs ava.gather_requirement the same gia.gather_requirement? {ava.gather_requirement is gia.gather_requirement}') # true  
+
+print(f'()')
 
 # =====================================================================
 #              Call static method from another method
@@ -88,6 +100,12 @@ class Test:
 
 # call class method
 Test.class_method_1()
+
+# Utility functions 
+# Static methods have limited use because they don't have access 
+# to the attributes of an object (instance variables) and class attributes (class variables).
+# However, they can be helpful in utility such as conversion from one type to another. 
+# The parameters provides are enough to operate.
 
 class TemperatureConverter:
     KELVIN = 'K'
@@ -131,3 +149,4 @@ class TemperatureConverter:
         return f'{value}{symbol}'
 f = TemperatureConverter.celcius_to_fahrenheit(35)
 print(TemperatureConverter.format(f, TemperatureConverter.FAHRENHEIT))
+
