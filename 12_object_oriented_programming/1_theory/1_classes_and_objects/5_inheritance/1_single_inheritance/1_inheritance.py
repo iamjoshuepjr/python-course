@@ -27,7 +27,7 @@
 #                                Single Inheritance
 # ===========================================================================================
 # In single inheritance, a child class inherits from a single-parent class. 
-# Here is one child class, ans one parent class. 
+# Here is one child class, and one parent class. 
 #                             +--------------+
 #                             | Parent Class |
 #                             +--------------+
