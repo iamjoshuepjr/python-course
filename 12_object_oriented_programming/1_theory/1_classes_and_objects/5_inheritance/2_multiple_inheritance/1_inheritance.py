@@ -9,6 +9,15 @@
 # So here is one child class and multiple parent classes. 
 # In Python, you can define a new class that inherits from multiple parent classes by listing 
 # the parents clases in parentheses after the new class name.
+#
+#      +--------------+    +--------------+
+#      | Parent Class |    | Parent Class |
+#     +--------------+     +--------------+
+#                  |         |
+#                  |         |
+#                +-------------+
+#                | Child Class |
+#                +-------------+
 
 class Animal:
     def __init__(self, name):
