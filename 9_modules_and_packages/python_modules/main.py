@@ -23,7 +23,7 @@ print(math.division(45, 3))
 # if you want to reference objects in a module without prefixing the module name, 
 # you can explicity import them using the follow sintax:
 from modules.relational import * # equality, inequality, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual
-# Now you can ise the imported functios without specifying the module name
+# Now you can use the imported functios without specifying the module name
 
 # All those function are in the relational.py file
 print(equality(45, 45))
