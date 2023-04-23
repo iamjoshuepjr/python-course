@@ -1,5 +1,5 @@
 # Initializing a Package
-# By conventio, when you import a package, Python will execute the __init__.py in that package.
+# By convention, when you import a package, Python will execute the __init__.py in that package.
 # Therefore, you can place the code in the __init__.py file to initialize package-level data.
 
 # deafaul value for parameter given to square function
