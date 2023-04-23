@@ -1,17 +1,3 @@
-# =============================================================================================
-#                                 Object-Oriented Programming
-# Object-Oriented Programming (OOP) is a programming paradigm or style of programming 
-# that revolves around the concept of objects. An object can be thought of as a collection of 
-# related data (properties or attributes) and code (methods or functions) that work together 
-# to perform  specific tasks or represent an entity in the real world.
-# In OOP, objects are created from classes, which are like blueprints ot templates that define 
-# the common properties and behaviors of a group of objects. 
-# Classes encapsulate the data and code into a single unit, making the code more:
-#  + organized
-#  + modular 
-#  + reusable
-# OOP is based and objects that can interact with each other to build complex systems.
-
 # Define a class
 # A class defines the attributes (variables) and methods (functions) that are common to all objects of that class
 class Dog:
