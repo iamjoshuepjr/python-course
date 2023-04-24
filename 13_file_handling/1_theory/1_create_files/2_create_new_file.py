@@ -14,7 +14,7 @@
 # 1. create file if does not exist
 # ==================================
 import os
-file_path = r'13_file_handling\\1_theory\\1_create_files\\files\\file_4.txt'
+file_path = r'13_file_handling\\1_theory\\1_create_files\\files\\4_new_ifdoesnt_exists.txt'
 if os.path.exists(file_path):
     print('File already exists!')
 else:
@@ -28,7 +28,7 @@ else:
 # 2. Use file access mode x
 # ==========================
 try: 
-    file_path = r'13_file_handling\\1_theory\\1_create_files\\files\\file_4.txt'
+    file_path = r'13_file_handling\\1_theory\\1_create_files\\files\\4_new_ifdoesnt_exists.txt'
     # create file
     with open(file_path, 'x') as file:
         pass

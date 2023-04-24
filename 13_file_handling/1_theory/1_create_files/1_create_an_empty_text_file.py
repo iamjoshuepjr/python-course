@@ -10,13 +10,13 @@
 # =============================
 # 1. create an empty text file
 # =============================
-data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\file_1.txt', 'x')
+data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\1_empty_file.txt', 'x')
 data_file.close()
 
 # ============================
 # 2. create and write a file
 # ============================
-data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\file_2.txt', 'w')
+data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\2_create_write_file.txt', 'w')
 data_file.write('+----------------------------+\
                  \n| 2. create and write a file |\
                  \n+----------------------------+')
@@ -37,7 +37,7 @@ import os
 # 3. create and write a file
 # ============================
 dir_path = r'13_file_handling\\1_theory\\1_create_files\\files\\'
-file_name = 'file_3.txt'
+file_name = '3_create_write_file.txt'
 file_path = os.path.join(dir_path, file_name)
 
 """
@@ -60,4 +60,4 @@ with open(file_path, 'w') as file:
 # list files from a working directory
 print('files inside my_files Directory:' , os.listdir(r"13_file_handling\\1_theory\\1_create_files\\files"))
 # verify file exist
-print('Is file_3.txt in the directory? ', os.path.isfile(r"13_file_handling\\1_theory\\1_create_files\\files\\file_3.txt"))
+print('Is file_3.txt in the directory? ', os.path.isfile(r"13_file_handling\\1_theory\\1_create_files\\files\\2_create_write_file.txt"))
