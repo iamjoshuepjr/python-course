@@ -10,21 +10,21 @@
  ===============================================================
    File mode                Meaning 
  =============================================================== 
- w               Use to create and write content into a new file.
+ w               Used to create and write content into a new file.
                  create a new file for writing. If already exists, 
                  it truncates the file first. 
 
- x               Open a file for exclusive creation. If the file
-                 already exists, this operation fails.
+ x               Creates a file for exclusive creation. If the file
+                 already exists, this operation fails, and an error 
+                 will be raised. 
  
- a               Open a file in the append mode and add new content
+ a               Opens a file in the append mode and add new content
                  at the end of the file.
  
- b               Create a binary file a file in the append mode 
+ b               Creates a binary file a file in the append mode 
                  and add new content
 
- t               Create and open a file in a text mode.
-                 
+ t               Creates and open a file in a text mode.                
 """
 # =============================
 # 1. create an empty text file
