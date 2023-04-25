@@ -1,3 +1,2 @@
-+-----------------------------------------+              
-| 5. Create a new file with permissions.  |              
-+-----------------------------------------+
+New content
+More content
