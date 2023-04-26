@@ -20,4 +20,4 @@ class GeometricShape:
         self.__heigth = heigth 
 
     def __str__(self):
-        return f"Geometric Figure: Base[{self.__base}] - Heigth[{self.__heigth}]"
+        return f"Geometric Figure: Base: {self.__base} - Heigth: {self.__heigth}"

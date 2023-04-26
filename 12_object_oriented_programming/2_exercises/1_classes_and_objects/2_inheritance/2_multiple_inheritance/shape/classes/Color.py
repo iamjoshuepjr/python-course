@@ -10,4 +10,4 @@ class Color:
         self.__color = color
     
     def __str__(self):
-        return f"Color [{self.__color}]"
+        return f"Color: {self.__color}"
