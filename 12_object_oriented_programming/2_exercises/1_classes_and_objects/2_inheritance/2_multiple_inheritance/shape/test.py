@@ -15,7 +15,7 @@ print(f'+-----------------------------+\
      \n Rectangle Color: {rectangle.color} \
      \n Rectangle Heigth: {rectangle.heigth} \
      \n Rectangle Base: {rectangle.base}\
-     \n Rectangle area: {rectangle.area_rectangle()}\
+     \n Rectangle area: {rectangle.area()}\
      \n+------------------------------+')
 # Method Resolution Order
 # print(Square.mro())

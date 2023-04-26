@@ -6,7 +6,7 @@ class Rectangle(GeometricShape, Color):
         GeometricShape.__init__(self, base, heigth)
         Color.__init__(self, color)
     
-    def area_rectangle(self):
+    def area(self):
         return self.base * self.heigth
 
     def __str__(self):

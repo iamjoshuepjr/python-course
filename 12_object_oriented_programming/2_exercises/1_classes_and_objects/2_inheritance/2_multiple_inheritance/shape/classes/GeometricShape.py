@@ -1,4 +1,6 @@
-class GeometricShape:
+from abc import ABC, abstractclassmethod
+
+class GeometricShape(ABC):
     def __init__(self, base, heigth):
         if self.validation(base):
             self.__base = base 
@@ -33,3 +35,7 @@ class GeometricShape:
     
     def validation(self, value):
         return True if 0 < value < 10 else False
+    
+    @abstractclassmethod
+    def area():
+        pass 
