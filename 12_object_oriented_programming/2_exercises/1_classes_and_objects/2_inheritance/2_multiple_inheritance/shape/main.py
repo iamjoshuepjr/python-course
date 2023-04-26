@@ -8,3 +8,5 @@ print(f'+-----------------------------+\
      \n| Square Base: {square.base} |\
      \n| Square area: {square.area()} |\
      \n+------------------------------+')
+# Method Resolution Order
+print(Square.mro())
