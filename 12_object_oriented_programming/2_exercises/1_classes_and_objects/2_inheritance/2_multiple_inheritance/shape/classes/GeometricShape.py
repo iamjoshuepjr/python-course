@@ -1,8 +1,17 @@
 class GeometricShape:
     def __init__(self, base, heigth):
-        self.__base = base 
-        self.__heigth = heigth
-    
+        if self.validation(base):
+            self.__base = base 
+        else:
+            self.__base = base 
+            print(f"Invalid value [{base}]")
+        
+        if self.validation(heigth):
+            self.__heigth = heigth
+        else:
+            self.__heigth = heigth
+            print(f"Invalid value [{heigth}]")
+            
     @property
     def base(self):
         return self.__base
@@ -21,3 +30,6 @@ class GeometricShape:
 
     def __str__(self):
         return f"Geometric Figure: Base: {self.__base} - Heigth: {self.__heigth}"
+    
+    def validation(self, value):
+        return True if 0 < value < 10 else False
