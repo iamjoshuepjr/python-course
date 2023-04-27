@@ -1,9 +1,10 @@
 # ========================================================================================
-#                   Exceptions
+#                                     Exceptions
+# ========================================================================================
 # In Python, an exception is an error that occurs during program execution. 
 # When an exception occurs the normal flow of the program is disrupted, 
 # and the interpreter stops the execution of the program and generates an error message.
-# The causes of exceptions mainly come from the enviroment wherw the code executes. 
+# The causes of exceptions mainly come from the enviroment where the code executes: 
 # - Reading a file that doesn´t exist.
 # - Connecting to a remote server that is offline.
 # - Bad user inputs.
@@ -24,9 +25,9 @@ try:
 
     # show the result
     if(change > 0):
-        result = f'Sales increase {abs(change)}%'
+        result = f'Sales increase {abs(change):.2f}%'
     else:
-        result = f'Sales decrease {abs(change)}%'
+        result = f'Sales decrease {abs(change):.2f}%'
 
     print(result)
 
