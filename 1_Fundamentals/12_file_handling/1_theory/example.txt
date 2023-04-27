@@ -1,0 +1,7 @@
++----------------------------------+
+|    Welcome to File Handling!     |
++----------------------------------+
+|I'm so excited you have reached   |
+|this point of the course.         |
+|Don't give up!                    |
++----------------------------------+
