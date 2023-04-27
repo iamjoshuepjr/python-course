@@ -5,7 +5,7 @@ def askNumber():
             number = int(value)
             return number
         except ValueError as error:
-            print(f'Error! [{value}] is not a number.')
+            print(f'Error! [{value}] is not a integer number.')
 
 numbers = []
 print('Enter a number list\nZero to finish.')
