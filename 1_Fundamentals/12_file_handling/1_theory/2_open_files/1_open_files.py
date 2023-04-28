@@ -118,7 +118,7 @@ with open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1
 
   # writing
   file.write('\n+-------------------------------------+\
-              \n| 3. Adding more content with \'r+\'. |\
+              \n| 2. Adding more content with \'r+\'. |\
               \n+-------------------------------------+')
               
   # read before writing
