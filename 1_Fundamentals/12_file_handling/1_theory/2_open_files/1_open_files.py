@@ -35,7 +35,7 @@
  =============================================================== 
  1. Find the path of a file
  2. Decice the access mode
- 3. Padd file path and access mode to the open() function
+ 3. Add file path and access mode to the open() function
  4. Read content into the file
  5. Write content into the file
  6. Close file after completing operation
@@ -43,7 +43,7 @@
 # =============================
 # 1. Openig a file in read mode
 # =============================
-data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\2_create_write_file.txt', 'r')
+data_file = open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\1_write.txt', 'r')
 # reading file
 print(data_file.read())
 
@@ -54,11 +54,12 @@ data_file.close()
 # 2. Openig a file in read mode
 # =============================
 try:
-  file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\3_create_write_file.txt', 'r')
+  file = open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\2_write.txt', 'r')
   print(file.read())
-  file.close()
 except FileNotFoundError:
   print('Please check the path.')
+finally:
+  file.close()
 
 # ==============================================================
 #             3. Openig a file in append mode
@@ -72,13 +73,13 @@ except FileNotFoundError:
 # file's content will no be truncated or deleted in this mode.
 
 try:
-  file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\1_empty_file.txt', 'a')
-  file.write('\n+-----------------------------------------+\
-              \n| 1. Create a new file with \'a\' mode.   |\
-              \n+-----------------------------------------+')
+  file = open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'a')
+  file.write('\n+---------------------------------+\
+              \n| 1. Open file with \'a\' mode.   |\
+              \n+---------------------------------+')
   
   # now opening file to read it
-  file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\1_empty_file.txt', 'r')
+  file = open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\1_write.txt', 'r')
   print(file.read())
   file.close()
 except FileNotFoundError:
@@ -92,11 +93,15 @@ except FileNotFoundError:
 # The general syntax is as follows:
 # with open(file, accessmode) as name
 
-with open(r'13_file_handling\\1_theory\\1_create_files\\files\\5_permission_file.txt', 'w') as file:
-  file.write('New content')
-  file.write('\nMore content')
+with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\1_write.txt', 'w') as file:
+  file.write('\n+---------------------------------------+\
+              \n| 2. Open file with \'with\' statement. |\
+              \n+---------------------------------------+')
+  file.write('\n+------------------------+\
+              \n| 3. Adding more content |\
+              \n+------------------------+')
 
-file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\4_new_if_does_not_exists.txt', 'r')
+file = open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\3_write.txt', 'r')
 print(file.read())
 file.close()
 
@@ -107,12 +112,14 @@ file.close()
 # simultaneously by using the '+' operator. When we pass 'r+' mode 
 # then it will be enable both rading and writing options in the file.
 
-with open(r'13_file_handling\\1_theory\\1_create_files\\files\\1_empty_file.txt', 'r+') as file:
+with open(r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r+') as file:
   # read before writing
   print(file.read())
 
   # writing
-  file.write('\nAdding more content with \'r+\'') 
-
+  file.write('\n+-------------------------------------+\
+              \n| 3. Adding more content with \'r+\'. |\
+              \n+-------------------------------------+')
+              
   # read before writing
   print(file.read())
