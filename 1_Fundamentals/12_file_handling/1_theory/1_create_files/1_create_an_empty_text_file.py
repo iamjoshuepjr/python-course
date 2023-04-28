@@ -10,36 +10,67 @@
  ===============================================================
    File mode                Meaning 
  =============================================================== 
- w               Used to create and write content into a new file.
-                 create a new file for writing. If already exists, 
-                 it truncates the file first. 
-
- x               Creates a file for exclusive creation. If the file
-                 already exists, this operation fails, and an error 
-                 will be raised. 
+ x            Creates a file for exclusive creation. If the file
+              already exists, this operation fails, and an error 
+              will be raised. 
  
- a               Opens a file in the append mode and add new content
-                 at the end of the file.
- 
- b               Creates a binary file a file in the append mode 
-                 and add new content
+ w            Used to create and write content into a new file.
+              create a new file for writing. If already exists, 
+              it truncates the file first. 
 
- t               Creates and open a file in a text mode.                
+ a            Opens a file in the append mode and add new content
+              at the end of the file.
+ 
+ b            Creates a binary file a file in the append mode 
+              and add new content
+
+ t            Creates and open a file in a text mode.                
 """
+import os
 # =============================
 # 1. create an empty text file
 # =============================
-data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\1_empty_file.txt', 'x')
-data_file.close()
+def ask():
+  name = input('File name: (test.txt): ')
+  mode = input('File mode: (w, x): ')
+  return name, mode
+
+def emptyfile():
+    print('\n+----------------------+\
+           \n- Create an empty file -\
+           \n+----------------------+\n')
+    root = '1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\'
+    name, mode = ask()
+    path = root + name
+    try:
+        data_file = open(path, mode)
+    except Exception as e:
+        print(e)
+    finally:
+        data_file.close()
+        
+emptyfile()
 
 # ============================
 # 2. create and write a file
 # ============================
-data_file = open(r'13_file_handling\\1_theory\\1_create_files\\files\\2_create_write_file.txt', 'w')
-data_file.write('+----------------------------+\
-                 \n| 2. create and write a file |\
-                 \n+----------------------------+')
-data_file.close()
+def createwrite():
+  print('\n+------------------------+\
+         \n- Create an Write a file -\
+         \n+------------------------+\n')
+  root = '1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\'
+  name, mode = ask()
+  path = root + name
+  try:
+    data_file = open(path, mode)
+    data_file.write('Welcome to file handling 1!\n')
+    data_file.write('Welcome to file handling 2!\n')
+  except Exception as e:
+    print(e)
+  finally:
+    data_file.close()
+
+createwrite()
 
 """
  ===============================================================
@@ -51,25 +82,27 @@ data_file.close()
  Syntax:
  open('file_path', 'access_mode')
 """
-import os
+
 # ============================
 # 3. create and write a file
 # ============================
-dir_path = r'13_file_handling\\1_theory\\1_create_files\\files\\'
-file_name = '3_create_write_file.txt'
-file_path = os.path.join(dir_path, file_name)
+
+directory = r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\"
+name = '2_write.txt'
+path = os.path.join(directory, name)
 
 """
- =========================================================
-  Using the with statement a file is closed automatically 
-  it ensures that all the resources that are tied up with 
-  the file are released.
- =========================================================
-"""
-with open(file_path, 'w') as file:
-    file.write('+----------------------------+\
-              \n| 3. create and write a file |\
-              \n+----------------------------+')
+#  =========================================================
+#   Using the with statement a file is closed automatically 
+#   it ensures that all the resources that are tied up with 
+#   the file are released.
+#  =========================================================
+# """
+
+with open(path, 'w') as file:
+  file.write('+----------------------------+\
+            \n| 3. create and write a file |\
+            \n+----------------------------+')
     
 """ 
  ===============================================================
@@ -77,6 +110,7 @@ with open(file_path, 'w') as file:
  ===============================================================
 """
 # list files from a working directory
-print('files inside my_files Directory:' , os.listdir(r"13_file_handling\\1_theory\\1_create_files\\files"))
+print('files inside 1_empty Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty"))
+print('files inside 2_write Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write"))
 # verify file exist
-print('Is file_3.txt in the directory? ', os.path.isfile(r"13_file_handling\\1_theory\\1_create_files\\files\\2_create_write_file.txt"))
+print(f'Is 2_write.txt in the Directory? ', os.path.isfile(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\2_write.txt"))
