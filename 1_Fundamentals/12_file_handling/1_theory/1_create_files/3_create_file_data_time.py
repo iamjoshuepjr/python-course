@@ -13,7 +13,7 @@ current = datetime.now()
 
 # create a file with date as a name day-month-year
 dir_path = "1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\"
-file_name = current.strftime('%d-%m-%Y.txt')
+file_name = current.strftime('4_%d-%m-%Y.txt')
 file_path = os.path.join(dir_path, file_name)
 
 with open(file_path, 'w') as file:
@@ -21,7 +21,7 @@ with open(file_path, 'w') as file:
 
 # create a file with name as day-month-year-hours-minutues-seconds
 dir_path = "1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\"
-file_name = current.strftime('%d-%m-%Y-%H-%M-%S.txt')
+file_name = current.strftime('5_%d-%m-%Y-%H-%M-%S.txt')
 file_path = os.path.join(dir_path, file_name)
 with open(file_path, 'w') as file:
     print('created', file_name)
