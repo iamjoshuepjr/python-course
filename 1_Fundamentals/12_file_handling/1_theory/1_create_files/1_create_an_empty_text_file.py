@@ -63,8 +63,10 @@ def createwrite():
   path = root + name
   try:
     data_file = open(path, mode)
-    data_file.write('Welcome to file handling 1!\n')
-    data_file.write('Welcome to file handling 2!\n')
+    data_file.write('+----------------------------+\
+                   \n| 1. create and write a file |\
+                   \n+----------------------------+')
+    
   except Exception as e:
     print(e)
   finally:
@@ -101,7 +103,7 @@ path = os.path.join(directory, name)
 
 with open(path, 'w') as file:
   file.write('+----------------------------+\
-            \n| 3. create and write a file |\
+            \n| 2. create and write a file |\
             \n+----------------------------+')
     
 """ 
