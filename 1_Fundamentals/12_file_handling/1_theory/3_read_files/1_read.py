@@ -72,4 +72,5 @@ print('+---------------------------------------\
 with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r+') as file:
    print(file.read())
    file.write('\nNew content')
+   file.write('\n2 New content')
    print(file.read())

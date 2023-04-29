@@ -3,3 +3,7 @@
 | 3. Adding more content |
 | 2. Open file with 'with' statement. |
 | 3. Adding more content |
+| 2. Open file with 'with' statement. |
+| 3. Adding more content |
+| 2. Open file with 'with' statement. |
+| 3. Adding more content |
