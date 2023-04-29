@@ -51,7 +51,7 @@
 print('+-------------------------\
      \n- Reading the whole file -\
      \n+-------------------------\n')
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r') as file:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r') as file:
    print(file.read())
 
 print('+--------------------------------\
@@ -59,7 +59,7 @@ print('+--------------------------------\
      \n+--------------------------------\n')
 
 try:
-  file = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r')
+  file = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r')
   print(file.read(107))
 except FileNotFoundError:
   print('Please check the path!')
@@ -69,7 +69,7 @@ finally:
 print('+---------------------------------------\
      \n- Reading and writing to the same file -\
      \n+---------------------------------------\n')
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r+') as file:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r+') as file:
    print(file.read())
    file.write('\nNew content')
    print(file.read())

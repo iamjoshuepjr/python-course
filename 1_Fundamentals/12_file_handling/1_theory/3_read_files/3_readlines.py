@@ -13,15 +13,15 @@ print('\n+-------------------------------\
      \n- Reading file using readlines() -\
      \n+---------------------------------\n')
 
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r') as file:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r') as file:
   lines = file.readlines()
   print(lines)
 
 print('\n+----------------------------------\
      \n- Reading firts n lines from a file -\
      \n+------------------------------------\n')
-N = 6
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r') as file:
+N = 3
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r') as file:
   head = [next(file) for x in range(N)]
   print(head)
 
@@ -29,7 +29,7 @@ print('\n+-----------------------------------\
      \n- Reading the last n lines in a file -\
      \n+-------------------------------------\n')
 
-N = 6
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\1_empty.txt', 'r') as file:
+N = 3
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\1_empty.txt', 'r') as file:
   lines = file.readlines()[N:]
   print(lines)

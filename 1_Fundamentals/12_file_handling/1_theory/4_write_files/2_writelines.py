@@ -9,14 +9,14 @@
 
 person_data = ['Name: Emma', '\nAddress: 221 Baker Street', '\nCity: London']
 # writing string and list of lines to a file
-fp = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'w')
+fp = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\8_write.txt', 'w')
 fp.writelines(person_data)
 fp.close()
 
 # =============================
 # opening the file in read mode
 # =============================
-fp = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'r')
+fp = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\8_write.txt', 'r')
 print(fp.read())
 fp.close()
 
@@ -24,13 +24,13 @@ fp.close()
 #  with statement
 # =================
 name = "Written using a context manager"
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\9_write.txt', 'w') as f:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\9_write.txt', 'w') as f:
     f.write(name)
 
 # ==================================================
 #  Opening the file in read mode to access the file
 # ==================================================
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\9_write.txt', 'r') as f:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\9_write.txt', 'r') as f:
     print(f.read())
 
 # =============================================
@@ -39,18 +39,18 @@ with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_
 name = '\nName: Ava'
 address = ['\nAddress: 221 Baker Street', '\nCity: London', '\nCountry:United Kingdom']
 # append to file
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'a') as f:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\8_write.txt', 'a') as f:
     f.write(name)
     f.writelines(address)
 
 # opening the file in read mode to access the file
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'a+') as f:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\8_write.txt', 'a+') as f:
     print(f.read())
 
 name = '\nName: Antony'
 address = ['\nAddress: 221 Baker Street', '\nCity: London', '\nCountry:United Kingdom']
 # append to file
-with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'a+') as f:
+with open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\8_write.txt', 'a+') as f:
     f.write(name)
     f.writelines(address)
     # move file handle to the start

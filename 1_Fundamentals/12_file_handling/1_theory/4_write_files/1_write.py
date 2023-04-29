@@ -34,21 +34,21 @@
               A new file is created otherwise.              
 """
 text = "This is to be written"
-file = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\7_write.txt', 'w')
+file = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\7_write.txt', 'w')
 file.write(text)
 print('Done writing')
 file.close()
 
-file = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\7_write.txt', 'r')
+file = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\7_write.txt', 'r')
 print(file.read())
 file.close()
 
 text = "This is new content to be written"
-file = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\7_write.txt', 'w+')
+file = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\7_write.txt', 'w+')
 file.write(text)
 print('Done writing')
 file.close()
 
-file = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\7_write.txt', 'r')
+file = open('1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\7_write.txt', 'r')
 print(file.read())
 file.close()
