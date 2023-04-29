@@ -14,21 +14,19 @@
 # 1. create file if does not exist
 # ==================================
 import os
-file_path = r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\3_write.txt'
+file_path = r'1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\3_write.txt'
 if os.path.exists(file_path):
     print('File already exists!')
 else:
     # create a file
     with open(file_path, 'w') as file:
-        file.write('+-----------------------------------------+\
-                  \n| 3. Create a new file if doesn\'t exist. |\
-                  \n+-----------------------------------------+')
+        file.write('| 3. Create a new file if doesn\'t exist. |')
 
 # ==========================
 # 2. Use file access mode x
 # ==========================
 try: 
-    file_path = r'1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\3_write.txt'
+    file_path = r'1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\3_write.txt'
     # create file
     with open(file_path, 'x') as file:
         pass

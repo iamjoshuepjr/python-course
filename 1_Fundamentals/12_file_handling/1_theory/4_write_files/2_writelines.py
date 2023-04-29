@@ -13,21 +13,29 @@ fp = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_
 fp.writelines(person_data)
 fp.close()
 
+# =============================
 # opening the file in read mode
+# =============================
 fp = open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\8_write.txt', 'r')
 print(fp.read())
 fp.close()
 
-# 
+# =================
+#  with statement
+# =================
 name = "Written using a context manager"
 with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\9_write.txt', 'w') as f:
     f.write(name)
 
-# opening the file in read mode to access the file
+# ==================================================
+#  Opening the file in read mode to access the file
+# ==================================================
 with open('1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\9_write.txt', 'r') as f:
     print(f.read())
 
-# Appending new content to an existing file
+# =============================================
+#  Appending new content to an existing file
+# =============================================
 name = '\nName: Ava'
 address = ['\nAddress: 221 Baker Street', '\nCity: London', '\nCountry:United Kingdom']
 # append to file

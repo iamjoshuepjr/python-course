@@ -39,7 +39,7 @@ def emptyfile():
     print('\n+----------------------+\
            \n- Create an empty file -\
            \n+----------------------+\n')
-    root = '1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty\\'
+    root = '1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty\\'
     name, mode = ask()
     path = root + name
     try:
@@ -55,17 +55,15 @@ emptyfile()
 # 2. create and write a file
 # ============================
 def createwrite():
-  print('\n+------------------------+\
-         \n- Create an Write a file -\
-         \n+------------------------+\n')
-  root = '1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\'
+  print('\n+-------------------------+\
+         \n- Create and Write a file -\
+         \n+-------------------------+\n')
+  root = '1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\'
   name, mode = ask()
   path = root + name
   try:
     data_file = open(path, mode)
-    data_file.write('+----------------------------+\
-                   \n| 1. create and write a file |\
-                   \n+----------------------------+')
+    data_file.write('| 1. create and write a file |')
     
   except Exception as e:
     print(e)
@@ -89,7 +87,7 @@ createwrite()
 # 3. create and write a file
 # ============================
 
-directory = r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\"
+directory = r"1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\"
 name = '2_write.txt'
 path = os.path.join(directory, name)
 
@@ -102,9 +100,7 @@ path = os.path.join(directory, name)
 # """
 
 with open(path, 'w') as file:
-  file.write('+----------------------------+\
-            \n| 2. create and write a file |\
-            \n+----------------------------+')
+  file.write('| 2. create and write a file |')
     
 """ 
  ===============================================================
@@ -112,7 +108,7 @@ with open(path, 'w') as file:
  ===============================================================
 """
 # list files from a working directory
-print('files inside 1_empty Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\1_empty"))
-print('files inside 2_write Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write"))
+print('files inside 1_empty Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\files\\1_empty"))
+print('files inside 2_write Directory:' , os.listdir(r"1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write"))
 # verify file exist
-print(f'Is 2_write.txt in the Directory? ', os.path.isfile(r"1_Fundamentals\\12_file_handling\\1_theory\\1_create_files\\files\\2_write\\2_write.txt"))
+print(f'Is 2_write.txt in the Directory? ', os.path.isfile(r"1_Fundamentals\\12_file_handling\\1_theory\\files\\2_write\\2_write.txt"))
