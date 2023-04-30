@@ -92,12 +92,12 @@ name = '2_write.txt'
 path = os.path.join(directory, name)
 
 """
-#  =========================================================
-#   Using the with statement a file is closed automatically 
-#   it ensures that all the resources that are tied up with 
-#   the file are released.
-#  =========================================================
-# """
+  =========================================================
+   Using the with statement a file is closed automatically 
+   it ensures that all the resources that are tied up with 
+   the file are released.
+  =========================================================
+"""
 
 with open(path, 'w') as file:
   file.write('| 2. create and write a file |')
