@@ -14,9 +14,9 @@ try:
 except Exception:
     print('Could not find this file!')
 
-# # =====================================================================
-# #                   Copy a all files from a directory
-# # =====================================================================
+# =====================================================================
+#                   Copy a all files from a directory
+# =====================================================================
 
 try:
     source_folder = '1_Fundamentals\\12_file_handling\\1_theory\\files\\6_copy\\'
