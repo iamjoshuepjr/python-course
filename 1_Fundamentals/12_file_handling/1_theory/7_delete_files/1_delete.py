@@ -24,12 +24,12 @@
 import os 
 
 directory = '1_Fundamentals\\12_file_handling\\1_theory\\files\\5_delete\\'
-name = '6_delete.txt'
+name = '7_delete.txt'
 path = os.path.join(directory, name)
 
 try:
     with open(path, 'w') as file:
-        file.write('| 6. create a file to delete it |')
+        file.write('| 7. create a file to delete it |')
         print(f'Done! {name} created.')
 except Exception as e:
     print(e)
