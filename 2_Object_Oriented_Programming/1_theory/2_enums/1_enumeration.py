@@ -50,4 +50,23 @@ rgb = {
 # =====================================================
 #   Access an enumeration member by name and value
 # =====================================================
-print(Color['RED'])
+print(f"Accessing by Name: {Color['RED']}")
+print(f"Accessing by Value: {Color(1)}")
+
+# ================================
+#   Iterate enumeration members 
+# ================================
+for color in Color:
+    print(f'Color: {color}')
+
+print(list(Color))
+
+# ====================================
+#    Enumeration are immutable 
+# ====================================
+# You cannot add or remove members 
+# once an enumeration is defined.
+# Also cannot change the member values
+
+Color['YELLOW'] = 4 
+# TypeError: 'EnumType' object does not support item assignment
