@@ -26,23 +26,35 @@ person = Person('Joshuép Jr.')
 Person.save(person)
 
 class User:
+    # job 1
     def __init__(self, name, email):
         self.name = name
         self.email = email
     
     def __repr__(self):
         return f'User(name = {self.name}, email = {self.email})'
-
+    
+    # job 2
     def userSave(self, user):
         print(f'Save the email: ({user}) to the database')
     
+    # job 3
     def validate(self, user):
         print(f'Validating {user}')
     
+    # job 4
     def send_email(self, subject, message, user):
         print(f'* Subject: {subject} - to: {user}\
               \n- Sending: {message}')
+
 user = User('Joshuép Jr.', 'joshuepjr@example.com')
 user.validate(user.name)
 user.userSave(user.email)
 user.send_email('SRP', 'Single Responsibility Principle', user.email)
+
+# Both Person and User classes have multiple responsibilities: 
+# Storing information 
+# Validation 
+# Send mails
+# This violates the Single Responsibility Principle, 
+# we can extract each responsibility into a separate class.
