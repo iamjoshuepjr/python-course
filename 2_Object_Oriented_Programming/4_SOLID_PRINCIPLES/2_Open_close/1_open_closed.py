@@ -14,6 +14,8 @@
 # the behavior of a software entity can be extended without modifying 
 # its source code.
 
+from abc import ABC, abstractmethod
+
 class OrderItem:
     def __init__(self, name, price):
         self.name = name
@@ -58,3 +60,33 @@ processor = OrderProcessor(notification_service)
 
 # Process the order
 processor.process_order(new_order)
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return f'Person({self.name})'
+
+class PersonStorage(ABC):
+    
+    @abstractmethod
+    def save(self, person):
+        pass
+
+class PersonDB(PersonStorage):
+    def save(self, person):
+        print(f'Save the {person} to databse')
+
+class PersonJSON(PersonStorage):
+    def save(self, person):
+        print(f'Save the {person} to JSON file')
+
+class PersonXML(PersonStorage):
+    def save(self, person):
+        print(f'Save the {person} to an XML file')
+
+person = Person('Joshuép Jr.')
+storage = PersonXML()
+storage.save(person)
