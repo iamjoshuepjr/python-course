@@ -39,4 +39,3 @@ class Aircraft(Flyable):
 class Car(Movable):
     def go(self):
         print('Going')
-    
