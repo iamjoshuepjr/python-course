@@ -13,7 +13,7 @@ print()
 for letter in 'Python':
     print(f'Current Letter: {letter}') 
 
-# output: letter -> taka values for each letter in Python phrase
+# output: letter -> take values for each letter in Python phrase
 # P
 # y
 # t
