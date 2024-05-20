@@ -13,8 +13,7 @@ print("+-----------------------------------+")
 print(f"  Variable value: {age}")
 print(f"  Data type:, {type(age)}")
 print(f"  Memory address:, {id(age)}")
-print("+-----------------------------------+")
-print()
+print("+-----------------------------------+\n")
         
 # float
 decimal: float = 24.99
@@ -24,8 +23,7 @@ print("+-----------------------------------+")
 print(f"  Variable value: {decimal}")
 print(f"  Data type: {type(decimal)}")
 print(f"  Memory address: {id(decimal)}")
-print("+-----------------------------------+")
-print()
+print("+-----------------------------------+\n")
 
 # string (str)      
 text: str = "Python"
@@ -35,8 +33,7 @@ print("+-----------------------------------+")
 print(f" Variable value: {text}")
 print(f" Data type:", {type(text)})
 print(f" Memory address: {id(text)}")
-print("+-----------------------------------+")
-print()
+print("+-----------------------------------+\n")
 
 # boolean  (True - False)    
 decision = True
@@ -46,8 +43,7 @@ print("+-----------------------------------+")
 print(f" Variable value: {decision}")
 print(f" Data type: {type(decision)}")
 print(f" Memory address: {id(decision)}")
-print("+-----------------------------------+")
-print()
+print("+-----------------------------------+\n")
 
 decision2 = False
 print("+-----------------------------------+")
@@ -56,5 +52,4 @@ print("+-----------------------------------+")
 print(f" Variable value: {decision2}")
 print(f" Data type:", {type(decision2)})
 print(f" Memory address: {id(decision2)}")
-print("+-----------------------------------+")
-print()
+print("+-----------------------------------+\n")
