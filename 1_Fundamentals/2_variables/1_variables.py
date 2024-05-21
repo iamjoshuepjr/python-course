@@ -35,7 +35,7 @@ print(f"Assigned to b: {b}")
 print(f"Assigned to c: {c}")
 
 # You can also assign multiple objects to multiple variables
-a, b, c =  24, 1, "Joshuép Jr."
+a, b, c =  25, 17, "Joshuép Jr."
 print(f"New Value Assigned to a: {a}")
 print(f"New Value Assigned to b: {b}")
 print(f"New Value Assigned to c: {c}")
