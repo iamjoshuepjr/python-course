@@ -3,7 +3,7 @@
 
 # ==================================================================================
 #                 Assign values to variables 
-# The = operator allows us to assign a value to a variable
+# The equal (=) operator allows us to assign a value to a variable
 
 # varName: str ->  indicates reference to the data type
 variable: str = "Hello, from Python!"
