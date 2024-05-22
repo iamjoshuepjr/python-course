@@ -1,9 +1,9 @@
 # ==========================================================================================
 #                                   Logical Operators
-# In python is and is not are used to check if two values are located on the same part 
+# In python 'is' and 'is not' are used to check if two values are located on the same part 
 # of the memory. Two variables that are equal does not imply thay they are identical
 
-# ====================================================
+# =====================================================
 # Operator  |   Meaning       
 #    is        True if the operands are identical 
 #                   (refer to the same object) 
@@ -58,7 +58,7 @@ text2 = 'JavaScript'
 list1 = [25, 17, 31]
 list2 = [25, 17, 31]
 
-print('\n--------------------------------------')
+print('--------------------------------------')
 print(f' {_five} is not {five} ')
 print(f' Result: {_five is not five}\n')
 
