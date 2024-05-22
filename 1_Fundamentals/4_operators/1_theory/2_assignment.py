@@ -1,4 +1,4 @@
-# asignment operator (=)
+# Assignment operator (=)
 age = 23
 print(f'Age: {age}')
 

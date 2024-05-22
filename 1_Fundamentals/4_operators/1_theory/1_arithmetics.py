@@ -18,8 +18,8 @@ modulus = number1 % number2
 # power
 power = number1 ** number2
 
-print('Arithmetic Operators')
-print()
+print('\nArithmetic Operators\n')
+
 print(f'Substraction result: {substraction}')
 print(f'Multiplication result: {multiplication}')
 print(f'Division result: {division}')
