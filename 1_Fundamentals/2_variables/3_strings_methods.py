@@ -1,5 +1,7 @@
 # Strings Methods
 
+import re
+
 print('\n\n\t\t\t\t    +-----------------+')
 print('\t\t\t\t    - STRINGS METHODS -')
 print('\t\t\t\t    +-----------------+\n\n')
@@ -19,7 +21,7 @@ print(f'Text Applied .lower() method: {upper.upper()}\n')
 # it'll print: THIS TEXT WILL BECOME UPPER CASE
 
 #capitalize() method -> converts the firts character to upper case
-print(".capitaliza() method")
+print(".capitalize() method")
 capitalize = "this text will be capitalized."
 print(f"Original text: {capitalize}")
 print(f"Text Applied .capitalize() method: {capitalize.capitalize()}\n")
@@ -27,6 +29,10 @@ print(f"Text Applied .capitalize() method: {capitalize.capitalize()}\n")
 
 # strip() method -> delete the blank spaces
 print(".strip() method")
-strip = "            Deleting blank spaces..."
+strip = "            Deleting blank spaces in the beginning..."
+strip_all = "   Deleting       all      blanck spaces...                  "
 print(f"Original text: {strip}")
+print(f"Original text 2: {strip_all}")
 print(f"Text Applied .strip() method: {strip.strip()}")
+strip_all = re.sub(r'\s+', ' ', strip_all)
+print(f"Text Applied re.sub(r): {strip_all}")
