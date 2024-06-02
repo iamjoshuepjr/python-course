@@ -49,22 +49,22 @@ print('\n\t\t      ----------------------')
 print('\t\t      - 2. is not Operator -')
 print('\t\t      ----------------------\n')
 
-five = 5
-_five = 9
+seven = 5
+nine = 9
 
-text1 = 'Python'
-text2 = 'JavaScript'
+python = 'Python'
+javascript = 'JavaScript'
 
-list1 = [25, 17, 31]
-list2 = [25, 17, 31]
+numbers1 = [25, 17, 31]
+numbers2 = [25, 17, 31]
 
 print('--------------------------------------')
-print(f' {_five} is not {five} ')
-print(f' Result: {_five is not five}\n')
+print(f' {seven} is not {nine} ')
+print(f' Result: {seven is not nine}\n')
 
-print(f' {text1} is not {text2} ')
-print(f' Result: {text1 is not text2}\n')
+print(f' {python} is not {javascript} ')
+print(f' Result: {python is not javascript}\n')
 
-print(f' {list1} is not {list2} ')
-print(f' Result: {list1 is not list2}')
+print(f' Nums1 = {numbers1} is not Nums2 = {numbers2} ')
+print(f' Result: {numbers1 is not numbers2}')
 print('--------------------------------------')
