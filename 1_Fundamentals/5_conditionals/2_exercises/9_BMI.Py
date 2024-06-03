@@ -4,7 +4,7 @@
 weight = float(input("Enter your weight(kg) here: "))
 height = float(input("Enter your height(m)  here: "))
 
-bmi = weight/(height ** 2)
+bmi = weight / (height ** 2)
 
 print(f"Your body mass index is: {bmi:.2f}")
 if bmi < 18.5:
