@@ -6,7 +6,7 @@ height = float(input("Enter your height(m)  here: "))
 
 bmi = weight/(height ** 2)
 
-print(f"Your body mass index is: {bmi:.3f}")
+print(f"Your body mass index is: {bmi:.2f}")
 if bmi < 18.5:
     print("Underwwight!")
 elif 18.5 <= bmi < 25:
