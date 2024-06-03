@@ -8,10 +8,10 @@ bmi = weight/(height ** 2)
 
 print(f"Your body mass index is: {bmi:.2f}")
 if bmi < 18.5:
-    print("Underwwight!")
+    print("- Underwwight!")
 elif 18.5 <= bmi < 25:
-    print("Normal weight!")
+    print("- Normal weight!")
 elif 25 <= bmi < 30:
-    print("Overweight!")
+    print("- Overweight!")
 else:
-    print("Obese!")
+    print("- Obese!")
