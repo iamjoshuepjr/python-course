@@ -5,10 +5,12 @@
 
 age = int(input("\nEnter your age here, please: "))
 if (age > 18):
+    # Actions for True
     print("+--------------------------------+")
     print("  Congrats! You're of legal age!  ")
     print("+--------------------------------+")
 else:
+    # Actions for False
     print("+-------------------------+")
     print(" Sorry!\n You aren't of legal age! ")
     print("+-------------------------+\n")
