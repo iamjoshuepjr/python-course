@@ -2,8 +2,7 @@
 # Exercise 2 
 # Convert a month given as a number into the correct season
 
-print()
-month = int(input("Enter a month number to convert it to the season: "))
+month = int(input("\nEnter a month number to convert it to the season: "))
 season = None
 if((month == 12) or (month == 1) or (month == 2) or (month == 3)):
     season = "Winter Season"

@@ -3,13 +3,11 @@ import os
 def clear_screen():
     os.system('clear')
 
-
 def leave_app():
     exit_app = input('Do you want to leave the app?\nYour response: ')
 
 balance = 10000
 deposit, withdraw, currentBalance = 0, 0, 0
-
 
 exit_app = 'n'
 while exit_app == 'n':
@@ -40,6 +38,10 @@ while exit_app == 'n':
             print('\n+--------------------+')
             print('- Saved Successfully -')
             print('+--------------------+')
+            print('\n+-------------------------------+')
+            print(f'- Desposit:    $US {deposit} - ')
+            print(f'- New Balance: $US {currentBalance} -')
+            print('+-------------------------------+')
             leave_app()
             clear_screen()
         case 3: 
